@@ -1,0 +1,7 @@
+Incase you get stuck: 
+The game starts with a selection screen where the only possible kingdom to chose is the desert.
+Once the desert is chosen you can click on the pyramids to bring you to a walking scene.
+The walking scene lasts two minutes and at the end you can click the telescope to bring you to space.
+In space you can click the particles to present a selection of stars where the player can draw their own constellation
+We then have a basic mockup of the meditation scene where the project ends.
+THanks :)

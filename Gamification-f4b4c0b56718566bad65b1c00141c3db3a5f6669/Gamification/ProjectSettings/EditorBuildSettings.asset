@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Kingdom Selection.unity
+    guid: cc08c21a6e4bc5e4e93a58d6a05c89fb
+  - enabled: 1
+    path: Assets/Scenes/Page 1.unity
+    guid: 252038c4fe172384b9fbfe728ab0b2a8
+  - enabled: 1
+    path: Assets/Scenes/Page 2.unity
+    guid: 5c24ee03e740ff045b89e4ad0702f4a0
+  - enabled: 1
+    path: Assets/Scenes/Egyptian Walk Scene.unity
+    guid: 608cf98e398080b46940ecc8ca5180a7
+  - enabled: 1
+    path: Assets/Scenes/Telescope Scene Updated.unity
+    guid: af9fd1b5fe711044a91e068b5a6c2c99
+  - enabled: 1
+    path: Assets/Scenes/Meditation Scene.unity
+    guid: bf9779054a472854d918b9e2b8563dbd
+  m_configObjects: {}
