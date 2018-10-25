@@ -10,6 +10,7 @@ public class endingScript : MonoBehaviour {
     public Image fadeOutScreen;
     private float alpha;
     private float fadeOutSpeed;
+    public string ScenetoLoad;
 
     // Use this for initialization
     void Start()
@@ -41,7 +42,7 @@ public class endingScript : MonoBehaviour {
             fadeOutScreen.color = tempColor;
             if (fadeTimer <= 0)
             {
-                SceneManager.LoadScene("Meditation Scene");
+                SceneManager.LoadScene(ScenetoLoad);
             }
             yield return null;
         }
