@@ -12,6 +12,8 @@ public class persistence : MonoBehaviour
     public float point1;
     public Vector3 firstPoint;
     public bool activated;
+    public bool resetData;
+
     public Vector3[] positionArray = new Vector3[6];
 
     // Use this for initialization
@@ -33,6 +35,10 @@ public class persistence : MonoBehaviour
 
     private void Start()
     {
+        if (resetData)
+        {
+            Reset();
+        }
         Load();
     }
 
@@ -81,7 +87,21 @@ public class persistence : MonoBehaviour
         file.Close();
 
     }
+    public void Reset()
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
 
+        PlayerSaves data = new PlayerSaves();
+        data.point1 = point1;
+        activated = false;
+        data.activated = activated;
+        
+
+        bf.Serialize(file, data);
+        file.Close();
+
+    }
     public void Load()
     {
         if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))

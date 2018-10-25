@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour {
+   
 
     public string SceneToLoad;
 
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log("detected");
+        
         StartCoroutine(SceneChange());
     }
 

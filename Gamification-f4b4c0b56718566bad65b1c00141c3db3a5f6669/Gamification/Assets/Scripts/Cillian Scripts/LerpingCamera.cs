@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class LerpingCamera : MonoBehaviour
 {
     public Image Black;
     public Transform target;
     public float blackoutTime;
-
-
+    public GameObject drawing;
+    public Text yourArt;
 
 
     // Use this for initialization
     void Start()
     {
-
+        drawing.SetActive(false);
+        yourArt.enabled = false;
     }
 
     // Update is called once per frame
