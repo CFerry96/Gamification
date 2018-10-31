@@ -398,8 +398,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pause: 0
+  settingsOn: 0
   Menu: {fileID: 0}
   MovementButtons: {fileID: 0}
+  SettingsMenu: {fileID: 0}
   continueButton: {fileID: 0}
   settingsButton: {fileID: 0}
   exitButton: {fileID: 0}
+  exitButton1: {fileID: 0}

@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayLength: 500
-  layermask:
+  layer:
     serializedVersion: 2
     m_Bits: 0
 --- !u!114 &114876965285051784
@@ -116,4 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33021e9456647dc45807ba37c87938c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lerpingTarget: {fileID: 0}
+  Black: {fileID: 0}
+  target: {fileID: 0}
+  blackoutTime: 0
+  drawing: {fileID: 0}
+  yourArt: {fileID: 0}

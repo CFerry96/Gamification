@@ -50,6 +50,7 @@ public class WalkingPauseMenu : MonoBehaviour {
         if (settingsOn == true)
         {
             SettingsMenu.SetActive(true);
+            Time.timeScale = 0f;
         }
 
         if (settingsOn == false)

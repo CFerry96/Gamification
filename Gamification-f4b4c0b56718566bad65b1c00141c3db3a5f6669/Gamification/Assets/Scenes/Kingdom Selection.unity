@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4514317, g: 0.5007862, b: 0.5715941, a: 1}
+  m_IndirectSpecularColor: {r: 0.45143163, g: 0.50078636, b: 0.5715942, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -176,6 +176,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 543b94d3fd1862546a1175cbd0601f3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 543b94d3fd1862546a1175cbd0601f3f, type: 3}
   m_IsPrefabAsset: 0
@@ -311,7 +315,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 60
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114876965285051784, guid: 613b9afa7b69d214291840c166b8acd3, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 613b9afa7b69d214291840c166b8acd3, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &382570913 stripped
@@ -637,7 +642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824c9838e87dc0b4b8df9c0b8d93e8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextPage: Page 1
 --- !u!135 &1408986584
 SphereCollider:
   m_ObjectHideFlags: 0

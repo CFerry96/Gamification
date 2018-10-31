@@ -97,7 +97,6 @@ public class SwipeScript : MonoBehaviour {
         if(swipeRight == true)
         {
             StartCoroutine("swipePageRight");
-            Debug.Log("swipe right");
             titles.SetActive(false);
             swipeRight = false;
         }
@@ -124,7 +123,6 @@ public class SwipeScript : MonoBehaviour {
         while (true)
         {
             anim.SetTrigger("previousPage");
-            Debug.Log("previous page");
             timeToTurnPage -= Time.deltaTime;
             if(timeToTurnPage<= 0)
             {
