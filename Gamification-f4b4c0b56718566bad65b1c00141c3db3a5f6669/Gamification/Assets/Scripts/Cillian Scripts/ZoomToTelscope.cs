@@ -22,7 +22,7 @@ public class ZoomToTelscope : MonoBehaviour {
                 transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * blackoutTime);
               
                 var tempVariable = Black.color;
-                tempVariable.a += Time.deltaTime * 2.5f;
+                tempVariable.a += Time.deltaTime / 2.5f;
                 Black.color = tempVariable;
             
                 transform.rotation = Quaternion.RotateTowards(this.transform.rotation, target.rotation, 90 * Time.deltaTime);

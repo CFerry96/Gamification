@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45143163, g: 0.50078636, b: 0.5715942, a: 1}
+  m_IndirectSpecularColor: {r: 0.4514317, g: 0.5007862, b: 0.5715941, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -314,6 +314,11 @@ Prefab:
     - target: {fileID: 4733369552941906, guid: 613b9afa7b69d214291840c166b8acd3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626989547634468, guid: 613b9afa7b69d214291840c166b8acd3,
+        type: 2}
+      propertyPath: layer.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114876965285051784, guid: 613b9afa7b69d214291840c166b8acd3, type: 2}
@@ -639,9 +644,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1408986581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824c9838e87dc0b4b8df9c0b8d93e8cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 139a2e8d0bd68f745bf5631e564a0a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Kingdom: Page 1
 --- !u!135 &1408986584
 SphereCollider:
   m_ObjectHideFlags: 0

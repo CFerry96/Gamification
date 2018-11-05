@@ -28,7 +28,7 @@ public class LerpingCamera : MonoBehaviour
         transform.LookAt(target.transform.parent);
 
         var tempVariable = Black.color;
-        tempVariable.a += Time.deltaTime / 2.5f;
+        tempVariable.a += Time.deltaTime / 1f;
         Black.color = tempVariable;
 
         transform.rotation = Quaternion.RotateTowards(this.transform.rotation, target.rotation, 90 * Time.deltaTime);
