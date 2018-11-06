@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4514317, g: 0.5007862, b: 0.5715941, a: 1}
+  m_IndirectSpecularColor: {r: 0.45143163, g: 0.50078636, b: 0.5715942, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1059,7 +1059,7 @@ GameObject:
   - component: {fileID: 564306412}
   m_Layer: 0
   m_Name: Scene Changer
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1071,7 +1071,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 564306409}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -18.471292, y: -2.3021002, z: -1.9661555}
+  m_LocalPosition: {x: -18.471292, y: -1.81, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 670050313}
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Black: {fileID: 1441335707}
   target: {fileID: 564306410}
-  blackoutTime: 3
+  blackoutTime: 7
   drawing: {fileID: 1527124349}
   yourArt: {fileID: 62589021}
 --- !u!20 &932477217
@@ -1795,83 +1795,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1001 &976857608
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.8119633
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -2.6122398
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -10.204
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
-        type: 2}
-      propertyPath: Menu
-      value: 
-      objectReference: {fileID: 2072534090}
-    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
-        type: 2}
-      propertyPath: SettingsMenu
-      value: 
-      objectReference: {fileID: 1540409215}
-    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
-        type: 2}
-      propertyPath: continueButton
-      value: 
-      objectReference: {fileID: 1421675969}
-    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
-        type: 2}
-      propertyPath: settingsButton
-      value: 
-      objectReference: {fileID: 16780477}
-    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
-        type: 2}
-      propertyPath: exitButton
-      value: 
-      objectReference: {fileID: 42868734}
-    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
-        type: 2}
-      propertyPath: exitButton1
-      value: 
-      objectReference: {fileID: 1529337047}
-    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
-        type: 2}
-      propertyPath: settingsOn
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!4 &1098815992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4417578597610636, guid: 076934f39ccf066409e99a830a851959,
@@ -7036,6 +6959,83 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1441335705}
   m_CullTransparentMesh: 0
+--- !u!1001 &1461534864
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.8119633
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.6122398
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10.204
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114240149034894006, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: Menu
+      value: 
+      objectReference: {fileID: 2072534090}
+    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: SettingsMenu
+      value: 
+      objectReference: {fileID: 1540409215}
+    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 1421675969}
+    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: settingsButton
+      value: 
+      objectReference: {fileID: 16780477}
+    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: exitButton
+      value: 
+      objectReference: {fileID: 42868734}
+    - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: exitButton1
+      value: 
+      objectReference: {fileID: 1529337047}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1495376663
 GameObject:
   m_ObjectHideFlags: 0

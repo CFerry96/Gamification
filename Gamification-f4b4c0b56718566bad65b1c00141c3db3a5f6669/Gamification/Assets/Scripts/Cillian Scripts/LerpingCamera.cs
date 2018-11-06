@@ -27,12 +27,18 @@ public class LerpingCamera : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position,target.transform.position, Time.deltaTime * blackoutTime);
         transform.LookAt(target.transform.parent);
 
-        var tempVariable = Black.color;
-        tempVariable.a += Time.deltaTime / 1f;
-        Black.color = tempVariable;
-
         transform.rotation = Quaternion.RotateTowards(this.transform.rotation, target.rotation, 90 * Time.deltaTime);
 
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Interactable")
+        {
+            var tempVariable = Black.color;
+            tempVariable.a += Time.deltaTime / 1f;
+            Black.color = tempVariable;
+        }
     }
 
 }
