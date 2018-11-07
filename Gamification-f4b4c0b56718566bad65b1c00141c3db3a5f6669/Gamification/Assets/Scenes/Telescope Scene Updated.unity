@@ -5609,6 +5609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 1434753106}
   lc: {fileID: 1434753111}
+  blackScreen: {fileID: 1979378732}
 --- !u!1 &292820909
 GameObject:
   m_ObjectHideFlags: 0
@@ -84751,7 +84752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1979378733
 MonoBehaviour:
   m_ObjectHideFlags: 0

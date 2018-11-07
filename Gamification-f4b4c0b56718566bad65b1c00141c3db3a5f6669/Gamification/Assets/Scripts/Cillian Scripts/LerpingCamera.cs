@@ -24,10 +24,10 @@ public class LerpingCamera : MonoBehaviour
     void Update()
     {
 
-        transform.position = Vector3.Lerp(transform.position,target.transform.position, Time.deltaTime * blackoutTime);
+        transform.position = Vector3.Lerp(transform.position,target.transform.position, Time.deltaTime / blackoutTime);
         transform.LookAt(target.transform.parent);
 
-        transform.rotation = Quaternion.RotateTowards(this.transform.rotation, target.rotation, 90 * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(this.transform.rotation, target.rotation, 90 * Time.deltaTime / blackoutTime);
 
     }
 

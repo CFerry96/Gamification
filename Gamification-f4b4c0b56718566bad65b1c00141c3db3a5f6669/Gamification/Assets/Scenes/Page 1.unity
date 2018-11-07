@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Black: {fileID: 1441335707}
   target: {fileID: 564306410}
-  blackoutTime: 7
+  blackoutTime: 2
   drawing: {fileID: 1527124349}
   yourArt: {fileID: 62589021}
 --- !u!20 &932477217
@@ -7033,6 +7033,11 @@ Prefab:
       propertyPath: exitButton1
       value: 
       objectReference: {fileID: 1529337047}
+    - target: {fileID: 114240149034894006, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: timeToTurnPage
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
   m_IsPrefabAsset: 0
