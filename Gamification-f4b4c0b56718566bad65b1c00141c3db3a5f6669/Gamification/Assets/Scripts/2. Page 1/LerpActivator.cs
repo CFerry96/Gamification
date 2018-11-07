@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoToJourney : MonoBehaviour {
+public class LerpActivator : MonoBehaviour {
 
     public GameObject Camera;
     public LerpingCamera lc;
@@ -12,6 +12,5 @@ public class GoToJourney : MonoBehaviour {
     {
         lc = Camera.GetComponent<LerpingCamera>();
         lc.enabled = true;
-
     }
 }

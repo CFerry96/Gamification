@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45143163, g: 0.50078636, b: 0.5715942, a: 1}
+  m_IndirectSpecularColor: {r: 0.44709975, g: 0.49700356, b: 0.5751106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -887,7 +887,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4417578597610636, guid: 076934f39ccf066409e99a830a851959, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.9700012
+      value: -3.23
       objectReference: {fileID: 0}
     - target: {fileID: 4417578597610636, guid: 076934f39ccf066409e99a830a851959, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1055,8 +1055,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 564306410}
-  - component: {fileID: 564306411}
-  - component: {fileID: 564306412}
   m_Layer: 0
   m_Name: Scene Changer
   m_TagString: Interactable
@@ -1077,30 +1075,6 @@ Transform:
   m_Father: {fileID: 670050313}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &564306411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 564306409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d24ec4c809a794ba4db08fec050f7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneToLoad: Egyptian Walk Scene
---- !u!65 &564306412
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 564306409}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &603820673
 Prefab:
   m_ObjectHideFlags: 0
@@ -1565,7 +1539,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4422074254043280, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.339996
+      value: -3.32
       objectReference: {fileID: 0}
     - target: {fileID: 4422074254043280, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1573,19 +1547,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4422074254043280, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.7070571
       objectReference: {fileID: 0}
     - target: {fileID: 4422074254043280, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.008382003
       objectReference: {fileID: 0}
     - target: {fileID: 4422074254043280, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.008382003
       objectReference: {fileID: 0}
     - target: {fileID: 4422074254043280, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.7070571
       objectReference: {fileID: 0}
     - target: {fileID: 4422074254043280, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
       propertyPath: m_RootOrder
@@ -1602,6 +1576,14 @@ Prefab:
     - target: {fileID: 4422074254043280, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.60000074
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422074254043280, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422074254043280, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1.358
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4cf67ec93946b147821e741e99cc752, type: 2}
@@ -1666,7 +1648,6 @@ GameObject:
   - component: {fileID: 932477211}
   - component: {fileID: 932477217}
   - component: {fileID: 932477216}
-  - component: {fileID: 932477215}
   - component: {fileID: 932477214}
   - component: {fileID: 932477213}
   - component: {fileID: 932477212}
@@ -1724,21 +1705,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 932477210}
   m_Enabled: 1
---- !u!114 &932477215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 932477210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4bb391f815a504eb2765087c459b19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayLength: 500
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &932477216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1755,6 +1721,7 @@ MonoBehaviour:
   blackoutTime: 2
   drawing: {fileID: 1527124349}
   yourArt: {fileID: 982746146}
+  SceneToLoad: Egyptian Walk Scene
 --- !u!20 &932477217
 Camera:
   m_ObjectHideFlags: 0
@@ -2001,13 +1968,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1179017809}
-  m_LocalRotation: {x: 0.19042405, y: -0.38166848, z: 0.19408838, w: 0.8834011}
+  m_LocalRotation: {x: 0.42762953, y: -0.42049155, z: 0.08079559, w: 0.7961105}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 28.986002, y: -43.345, z: 13.053}
+  m_LocalEulerAnglesHint: {x: 48.489002, y: -64.948006, z: -20.397001}
 --- !u!1 &1254956936
 GameObject:
   m_ObjectHideFlags: 0
@@ -7568,7 +7535,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4378222961534292, guid: a80ca9a8e61043c4fb91c3536ca10d5b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.050003
+      value: -6.31
       objectReference: {fileID: 0}
     - target: {fileID: 4378222961534292, guid: a80ca9a8e61043c4fb91c3536ca10d5b, type: 2}
       propertyPath: m_LocalPosition.z

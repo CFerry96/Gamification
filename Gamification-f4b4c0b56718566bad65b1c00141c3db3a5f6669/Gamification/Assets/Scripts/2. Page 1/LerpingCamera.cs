@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class LerpingCamera : MonoBehaviour
@@ -11,10 +12,11 @@ public class LerpingCamera : MonoBehaviour
     public float blackoutTime;
     public GameObject drawing;
     public GameObject yourArt;
+    public string SceneToLoad;
 
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         drawing.SetActive(false);
         yourArt.SetActive(false);
@@ -28,17 +30,17 @@ public class LerpingCamera : MonoBehaviour
         transform.LookAt(target.transform.parent);
 
         transform.rotation = Quaternion.RotateTowards(this.transform.rotation, target.rotation, 90 * Time.deltaTime / blackoutTime);
-
+        StartCoroutine(SceneChange());
     }
-
-    private void OnTriggerStay(Collider other)
+     
+    IEnumerator SceneChange()
     {
-        if (other.tag == "Interactable")
-        {
-            var tempVariable = Black.color;
-            tempVariable.a += Time.deltaTime / 1f;
-            Black.color = tempVariable;
-        }
+        yield return new WaitForSeconds(5);
+        var tempVariable = Black.color;
+        tempVariable.a += Time.deltaTime / 1f;
+        Black.color = tempVariable;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneToLoad);
     }
 
 }

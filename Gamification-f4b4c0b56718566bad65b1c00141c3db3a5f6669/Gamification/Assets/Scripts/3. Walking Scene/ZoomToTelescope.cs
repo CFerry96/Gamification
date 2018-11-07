@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ZoomToTelscope : MonoBehaviour {
+public class ZoomToTelescope : MonoBehaviour {
 
     public Image Black;
     public Transform target;
@@ -12,13 +12,12 @@ public class ZoomToTelscope : MonoBehaviour {
       
     public float blackoutTime;
     public Transform playerTransform;
-    public Transform telescopeTransform;
     public movementScript ms;
 
         // Update is called once per frame
         void Update()
         {
-            if (Vector3.Distance(playerTransform.position, telescopeTransform.position) <= 6)
+            if (Vector3.Distance(playerTransform.position, target.position) <= 6)
             {
                 transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * blackoutTime);
               
@@ -36,7 +35,7 @@ public class ZoomToTelscope : MonoBehaviour {
 
         IEnumerator SceneChange()
          {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(2);
             SceneManager.LoadScene(SceneToLoad);
          }
 }
