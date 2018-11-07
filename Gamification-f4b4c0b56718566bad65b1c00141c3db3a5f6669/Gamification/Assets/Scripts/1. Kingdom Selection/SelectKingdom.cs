@@ -28,7 +28,7 @@ public class SelectKingdom : MonoBehaviour {
             yield return new WaitForSeconds(iconDisappearingTime);
             leftPage.SetActive(false);
             yield return new WaitForSeconds(timeToWait);
-            Debug.Log("Load Scene");
+            //Debug.Log("Load Scene");
             SceneManager.LoadScene(Kingdom);
         }
     }
