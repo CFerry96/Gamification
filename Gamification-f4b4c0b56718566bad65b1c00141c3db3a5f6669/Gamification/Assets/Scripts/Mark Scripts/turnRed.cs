@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objectEffects : MonoBehaviour {
+public class turnRed : MonoBehaviour {
     public Material materialColour;
 
 	// Use this for initialization

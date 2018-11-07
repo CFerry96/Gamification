@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class GoToConstellation : MonoBehaviour {
 
-    public GameObject Camera;
-    public ZoomToSpace lc;
-    public GameObject blackScreen;
+    public GameObject cameraPos, buttons, blackScreen;
+    public float blackoutTime;
+    bool clicked = false;
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
-        lc = Camera.GetComponent<ZoomToSpace>();
-        lc.enabled = true;
-        blackScreen.SetActive(true);
+        clicked = true;
+    }
 
+    void Update()
+    {
+        if (clicked == true)
+        {
+            cameraPos.transform.position = Vector3.Lerp(cameraPos.transform.position, transform.position, Time.deltaTime * blackoutTime);
+            buttons.SetActive(false);
+            blackScreen.SetActive(true);
+        }
     }
 }
+

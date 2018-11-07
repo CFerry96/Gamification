@@ -6,12 +6,18 @@ public class ZoomToSpace : MonoBehaviour {
 
     public GameObject zoomLocation, buttons;
     public float blackoutTime;
+    bool clicked = false;
 
-    // Update is called once per frame
+    private void OnMouseDown()
+    {
+            clicked = true;
+    }
+
     void Update () {
-
-        transform.position = Vector3.Lerp(transform.position, zoomLocation.transform.position, Time.deltaTime * blackoutTime);
-        //transform.LookAt(lerpingTarget.transform.parent);
-        buttons.SetActive(false);
+        if (clicked == true)
+        {
+            transform.position = Vector3.Lerp(transform.position, zoomLocation.transform.position, Time.deltaTime * blackoutTime);
+            buttons.SetActive(false);
+        }
     }
 }

@@ -5607,9 +5607,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e646f252d1097f41900565751c4b7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 1434753106}
-  lc: {fileID: 1434753111}
+  cameraPos: {fileID: 1434753106}
+  buttons: {fileID: 1839644690}
   blackScreen: {fileID: 1979378732}
+  blackoutTime: 2
 --- !u!1 &292820909
 GameObject:
   m_ObjectHideFlags: 0
@@ -69391,8 +69392,6 @@ GameObject:
   - component: {fileID: 1434753109}
   - component: {fileID: 1434753108}
   - component: {fileID: 1434753107}
-  - component: {fileID: 1434753110}
-  - component: {fileID: 1434753111}
   - component: {fileID: 1434753112}
   - component: {fileID: 1434753114}
   - component: {fileID: 1434753113}
@@ -69463,35 +69462,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1434753110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1434753106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4bb391f815a504eb2765087c459b19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayLength: 10000
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
---- !u!114 &1434753111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1434753106}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cdc1161f797f874391fbb5a755de4f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoomLocation: {fileID: 291972893}
-  buttons: {fileID: 1839644690}
-  blackoutTime: 2
 --- !u!114 &1434753112
 MonoBehaviour:
   m_ObjectHideFlags: 0
