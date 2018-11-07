@@ -6,11 +6,13 @@ public class GoToConstellation : MonoBehaviour {
 
     public GameObject Camera;
     public ZoomToSpace lc;
+    public GameObject blackScreen;
 
     void OnMouseDown()
     {
         lc = Camera.GetComponent<ZoomToSpace>();
         lc.enabled = true;
+        blackScreen.SetActive(true);
 
     }
 }
