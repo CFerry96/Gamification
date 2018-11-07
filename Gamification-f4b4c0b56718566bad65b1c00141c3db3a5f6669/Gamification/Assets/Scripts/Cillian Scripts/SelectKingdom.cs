@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SelectKingdom : MonoBehaviour {
     public string Kingdom;
     public Animator anim;
+    public float timeToWait;
 
 
     private void OnMouseDown()
@@ -20,7 +21,7 @@ public class SelectKingdom : MonoBehaviour {
         while (true)
         {
             
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(timeToWait);
             SceneManager.LoadScene(Kingdom);
         }
     }
