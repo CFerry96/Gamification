@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GyroControlls : MonoBehaviour {
+public class GyroControls : MonoBehaviour {
 
     private bool gyroEnabled;
     private Gyroscope gyro;
