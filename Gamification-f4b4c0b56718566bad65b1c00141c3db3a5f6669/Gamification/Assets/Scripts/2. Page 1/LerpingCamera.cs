@@ -17,9 +17,11 @@ public class LerpingCamera : MonoBehaviour
 
     // Use this for initialization
     void Awake()
-    {
-        drawing.SetActive(false);
-        yourArt.SetActive(false);
+    {   if (persistence.control.activated != true)
+        {
+            drawing.SetActive(false);
+            yourArt.SetActive(false);
+        }
     }
 
     // Update is called once per frame
