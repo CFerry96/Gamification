@@ -79104,7 +79104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeTimer: 8
   fadeOutScreen: {fileID: 1979378733}
-  ScenetoLoad: Page 1
+  ScenetoLoad: Meditation Scene
 --- !u!4 &1535519331
 Transform:
   m_ObjectHideFlags: 0

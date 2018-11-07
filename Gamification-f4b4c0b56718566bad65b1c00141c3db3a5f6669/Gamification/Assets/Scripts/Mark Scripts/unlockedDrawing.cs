@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class unlockedDrawing : MonoBehaviour {
     public LineRenderer lr;
-    public Text yourArt;
+    public GameObject yourArt;
 
 	// Use this for initialization
 	void Start () {
@@ -13,11 +13,11 @@ public class unlockedDrawing : MonoBehaviour {
         lr.positionCount = 6;
         if(persistence.control.activated == true)
         {
-            yourArt.enabled = true;
+            yourArt.SetActive(true);
         }
         else
         {
-            yourArt.enabled = false;
+            yourArt.SetActive(false);
         }
        
 	}

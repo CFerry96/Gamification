@@ -10,14 +10,14 @@ public class LerpingCamera : MonoBehaviour
     public Transform target;
     public float blackoutTime;
     public GameObject drawing;
-    public Text yourArt;
+    public GameObject yourArt;
 
 
     // Use this for initialization
     void Start()
     {
         drawing.SetActive(false);
-        yourArt.enabled = false;
+        yourArt.SetActive(false);
     }
 
     // Update is called once per frame
