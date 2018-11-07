@@ -697,6 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kingdom: Page 1
   anim: {fileID: 65804731}
+  timeToWait: 1
 --- !u!135 &1408986584
 SphereCollider:
   m_ObjectHideFlags: 0
