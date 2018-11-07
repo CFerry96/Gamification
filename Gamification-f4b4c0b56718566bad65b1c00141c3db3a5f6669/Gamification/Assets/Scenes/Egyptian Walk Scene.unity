@@ -5189,6 +5189,7 @@ MonoBehaviour:
   SceneToLoad: Telescope Scene Updated
   blackoutTime: 5
   playerTransform: {fileID: 1660635668}
+  telescopeTransform: {fileID: 1312365713}
   ms: {fileID: 410888528}
 --- !u!65 &1660635676
 BoxCollider:

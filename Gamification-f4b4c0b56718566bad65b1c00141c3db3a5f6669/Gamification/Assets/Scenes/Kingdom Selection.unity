@@ -258,6 +258,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &65804731 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95567953512580818, guid: b2c93ade66b009e4fb696f13c66c22d4,
+    type: 2}
+  m_PrefabInternal: {fileID: 659251613}
 --- !u!114 &159767731 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114414192829400790, guid: 58d1865d504be3c45bea72f25fd26e25,
@@ -404,6 +409,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 137694189259173832, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.8119633
@@ -481,6 +491,44 @@ Prefab:
       propertyPath: exitFromPage
       value: 
       objectReference: {fileID: 382570913}
+    - target: {fileID: 95567953512580818, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 3e8dabba57fba6d44963c4f98d04b9f9, type: 3}
+    - target: {fileID: 137694189259173832, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137694189259173832, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: m_BlendShapeWeights.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137694189259173832, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: m_BlendShapeWeights.Array.data[4]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137694189259173832, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217473380255842, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217473380255842, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137694189259173832, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: m_BlendShapeWeights.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
   m_IsPrefabAsset: 0
@@ -648,6 +696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Kingdom: Page 1
+  anim: {fileID: 65804731}
 --- !u!135 &1408986584
 SphereCollider:
   m_ObjectHideFlags: 0

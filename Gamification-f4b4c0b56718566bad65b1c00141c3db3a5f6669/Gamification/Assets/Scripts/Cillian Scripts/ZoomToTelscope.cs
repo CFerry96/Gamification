@@ -12,12 +12,13 @@ public class ZoomToTelscope : MonoBehaviour {
       
     public float blackoutTime;
     public Transform playerTransform;
+    public Transform telescopeTransform;
     public movementScript ms;
 
         // Update is called once per frame
         void Update()
         {
-            if (Vector3.Distance(playerTransform.position, this.transform.position) <= 6)
+            if (Vector3.Distance(playerTransform.position, telescopeTransform.position) <= 6)
             {
                 transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * blackoutTime);
               
