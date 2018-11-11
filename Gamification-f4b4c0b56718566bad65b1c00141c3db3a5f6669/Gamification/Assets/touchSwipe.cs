@@ -9,6 +9,8 @@ public class touchSwipe : MonoBehaviour {
     private Vector3 lp;   //Last touch position
     private float dragDistance;  //minimum distance for a swipe to be registered
     private List<Vector3> touchPositions = new List<Vector3>(); //store all the touch positions in list
+    public Animator anim;
+    public string PagePrev, PageNext;
 
     // Use this for initialization
     void Start () {
@@ -53,6 +55,7 @@ public class touchSwipe : MonoBehaviour {
                         {   //Left swipe
                             Debug.Log("Left Swipe");
                             SceneManager.LoadScene("Page 2");
+                            StartCoroutine(swipePageLeft());
                         }
                     }
                     else
@@ -73,5 +76,14 @@ public class touchSwipe : MonoBehaviour {
 
             }
         }
+    }
+
+    IEnumerator swipePageLeft()
+    {
+        anim.SetTrigger("nextPage");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(PageNext);
+        yield return null;
+
     }
 }
