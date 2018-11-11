@@ -12,7 +12,8 @@ public class SwipeScript : MonoBehaviour {
     public Animator pageTurn;
     public float timeToTurnPage;
     public Animator anim;
-    public GameObject titles;
+    public float animationTime, animationTime2;
+    public GameObject rightSideObjects, leftSideObjects;
 
     private void Start()
     {
@@ -97,7 +98,7 @@ public class SwipeScript : MonoBehaviour {
         if(swipeRight == true)
         {
             StartCoroutine("swipePageRight");
-            titles.SetActive(false);
+            //titles.SetActive(false);
             swipeRight = false;
         }
         else if(swipeLeft == true)
@@ -119,8 +120,11 @@ public class SwipeScript : MonoBehaviour {
    
     IEnumerator swipePageLeft()
     {
+        rightSideObjects.SetActive(false);
         anim.SetTrigger("nextPage");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(animationTime);
+        leftSideObjects.SetActive(false);
+        yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PageNext);
         yield return null;
 
@@ -128,16 +132,14 @@ public class SwipeScript : MonoBehaviour {
 
     IEnumerator swipePageRight()
     {
-        while (true)
-        {
-            anim.SetTrigger("previousPage");
-            timeToTurnPage -= Time.deltaTime;
-            if(timeToTurnPage<= 0)
-            {
-                SceneManager.LoadScene(PagePrev);
-            }
-            yield return null;
-        }
+        leftSideObjects.SetActive(false);
+        anim.SetTrigger("previousPage");
+        yield return new WaitForSeconds(animationTime);
+        rightSideObjects.SetActive(false);
+        yield return new WaitForSeconds(animationTime2);
+        SceneManager.LoadScene(PagePrev);
+        yield return null;
+
     }
 
 }

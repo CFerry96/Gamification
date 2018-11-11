@@ -11,6 +11,8 @@ public class touchSwipe : MonoBehaviour {
     private List<Vector3> touchPositions = new List<Vector3>(); //store all the touch positions in list
     public Animator anim;
     public string PagePrev, PageNext;
+    public float animationTime, animationTime2;
+    public GameObject rightSideObjects, leftSideObjects;
 
     // Use this for initialization
     void Start () {
@@ -50,11 +52,12 @@ public class touchSwipe : MonoBehaviour {
                         if ((lp.x > fp.x))  //If the movement was to the right)
                         {   //Right swipe
                             Debug.Log("Right Swipe");
+                            StartCoroutine(swipePageRight());
                         }
                         else
                         {   //Left swipe
                             Debug.Log("Left Swipe");
-                            SceneManager.LoadScene("Page 2");
+                            //SceneManager.LoadScene("Page 2");
                             StartCoroutine(swipePageLeft());
                         }
                     }
@@ -80,9 +83,24 @@ public class touchSwipe : MonoBehaviour {
 
     IEnumerator swipePageLeft()
     {
+        rightSideObjects.SetActive(false);
         anim.SetTrigger("nextPage");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(animationTime);
+        leftSideObjects.SetActive(false);
+        yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PageNext);
+        yield return null;
+
+    }
+
+    IEnumerator swipePageRight()
+    {
+        leftSideObjects.SetActive(false);
+        anim.SetTrigger("previousPage");
+        yield return new WaitForSeconds(animationTime);
+        rightSideObjects.SetActive(false);
+        yield return new WaitForSeconds(animationTime2);
+        SceneManager.LoadScene(PagePrev);
         yield return null;
 
     }
