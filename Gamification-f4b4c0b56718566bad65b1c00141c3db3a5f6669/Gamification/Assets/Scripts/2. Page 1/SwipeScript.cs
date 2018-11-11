@@ -102,7 +102,7 @@ public class SwipeScript : MonoBehaviour {
         }
         else if(swipeLeft == true)
         {
-            SceneManager.LoadScene(PageNext);
+            StartCoroutine("swipePageLeft");
         }
 
     }
@@ -117,6 +117,14 @@ public class SwipeScript : MonoBehaviour {
     public bool SwipeLeft { get { return swipeLeft; } }
     public bool SwipeRight { get { return swipeRight;  } }
    
+    IEnumerator swipePageLeft()
+    {
+        anim.SetTrigger("nextPage");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(PageNext);
+        yield return null;
+
+    }
 
     IEnumerator swipePageRight()
     {
