@@ -7691,6 +7691,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5516f9bf3052741489c5e15fdd8c1548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1925797144}
+  PagePrev: 
+  PageNext: Page 2
 --- !u!95 &1925797144 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95567953512580818, guid: b2c93ade66b009e4fb696f13c66c22d4,
