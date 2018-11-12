@@ -29,6 +29,7 @@ public class endingScript : MonoBehaviour {
         if(sceneEnd == true)
         {
             StartCoroutine("EndLevel");
+            soundManager.soundBoy.StartCoroutine("endingLayers");
             sceneEnd = false;
         }
     }

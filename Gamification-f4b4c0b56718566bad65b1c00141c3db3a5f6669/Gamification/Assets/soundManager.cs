@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class soundManager : MonoBehaviour {
     public static soundManager soundBoy = null;
-    public AudioSource baseTrack;
-    public AudioSource layerTrack;
+    public AudioSource baseTrack, layerTrack, finalTrack;
     public float fadeInTime;
+    public float fadeOutTime;
     //public static soundManager instance = null;
 
     
@@ -45,6 +45,28 @@ public class soundManager : MonoBehaviour {
             {
                 fadeIn = false;
             }
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return null;
+    }
+    IEnumerator endingLayers()
+    {
+        bool fadeIn = true;
+        //finalTrack.volume = 1;
+        while (fadeIn)
+        {
+            finalTrack.volume += Time.deltaTime / fadeInTime;
+            if (finalTrack.volume == 1)
+            {
+                fadeIn = false;
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+        while (!fadeIn)
+        {
+            baseTrack.volume -= Time.deltaTime / fadeOutTime;
+            layerTrack.volume -= Time.deltaTime / fadeOutTime;
+            finalTrack.volume -= Time.deltaTime / fadeOutTime;
             yield return new WaitForSeconds(0.1f);
         }
         yield return null;
