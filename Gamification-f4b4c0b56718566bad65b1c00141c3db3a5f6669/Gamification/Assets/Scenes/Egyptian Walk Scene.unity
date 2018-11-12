@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311816, g: 0.38073957, b: 0.35872912, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311813, g: 0.3807395, b: 0.35872906, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -462,6 +462,40 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c7d49731236ba4690d165fdabfad06, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &52370638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: aef9f5bbb2ddb0b4fb3bec7e467fdd77,
+    type: 3}
+  m_PrefabInternal: {fileID: 193675148}
+--- !u!114 &52370639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 52370638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88895ecd79e71c84291bc67ae03274b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Black: {fileID: 368368568}
+  target: {fileID: 206938915}
+  SceneToLoad: Telescope Scene Updated
+  blackoutTime: 5
+  playerTransform: {fileID: 410888529}
+  ms: {fileID: 410888528}
+--- !u!65 &52370641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 52370638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24.631096, y: 9.8246565, z: 2.62007}
+  m_Center: {x: 5.940398, y: 4.4123287, z: -0.8100346}
 --- !u!4 &65430679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7b83b22667835c84fb77446871e918cd,
@@ -1201,7 +1235,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206938914}
   m_LocalRotation: {x: -0.17402063, y: 0.70800793, z: 0.15875596, w: 0.6657613}
-  m_LocalPosition: {x: -1.987, y: 0.346, z: 119.208}
+  m_LocalPosition: {x: -5.253, y: 0.726, z: 114.997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6354,6 +6388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a995b8fefbfa5479383fbe53cafe4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraContainer: {fileID: 0}
 --- !u!65 &1660635676
 BoxCollider:
   m_ObjectHideFlags: 0

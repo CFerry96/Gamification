@@ -130,6 +130,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 434426528}
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!95 &348570515 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95263875345114490, guid: b2c93ade66b009e4fb696f13c66c22d4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1070195439}
 --- !u!1001 &434426528
 Prefab:
   m_ObjectHideFlags: 0
@@ -380,6 +385,31 @@ Prefab:
       propertyPath: rightSideObjects
       value: 
       objectReference: {fileID: 561664029}
+    - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: PagePrev
+      value: Page 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: leftSideObjects
+      value: 
+      objectReference: {fileID: 1938632079}
+    - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: rightSideObjects
+      value: 
+      objectReference: {fileID: 561664029}
+    - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: PageNext
+      value: Kingdom Selection
+      objectReference: {fileID: 0}
+    - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: pageTurn
+      value: 
+      objectReference: {fileID: 348570515}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
   m_IsPrefabAsset: 0
@@ -498,7 +528,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 41.953445
+  field of view: 39
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

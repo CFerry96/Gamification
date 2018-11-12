@@ -85,7 +85,7 @@ public class SwipeScript : MonoBehaviour {
                 {
                     swipeLeft = true;
                 }
-                else
+                else 
                 {
                     swipeRight = true;
                 }
@@ -129,7 +129,6 @@ public class SwipeScript : MonoBehaviour {
         yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PageNext);
         yield return null;
-
     }
 
     IEnumerator swipePageRight()

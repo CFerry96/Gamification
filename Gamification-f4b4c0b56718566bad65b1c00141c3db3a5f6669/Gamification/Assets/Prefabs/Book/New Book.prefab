@@ -53,9 +53,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4576358741589794}
-  - component: {fileID: 114240149034894006}
   - component: {fileID: 95567953512580818}
   - component: {fileID: 114004160091723066}
+  - component: {fileID: 114879169975827806}
   m_Layer: 0
   m_Name: New Book
   m_TagString: Untagged
@@ -168,7 +168,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386699217421116}
   m_LocalRotation: {x: -0.7071068, y: 8.659561e-17, z: 8.659561e-17, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4389453932959568}
@@ -181,8 +181,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120486801760092}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.487342, y: -2.15, z: 8.4}
-  m_LocalScale: {x: 4.6118817, y: 3.8737502, z: 3.0103803}
+  m_LocalPosition: {x: -2.4873, y: -2.15, z: 8.4}
+  m_LocalScale: {x: 6.3989863, y: 3.8737502, z: 3.913494}
   m_Children: []
   m_Father: {fileID: 4576358741589794}
   m_RootOrder: 0
@@ -410,7 +410,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273190873926330}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 3e8dabba57fba6d44963c4f98d04b9f9, type: 3}
   m_Controller: {fileID: 9100000, guid: 14d008fa361a1e84281ec7be16f42043, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -439,8 +439,8 @@ MonoBehaviour:
   settingsButton: {fileID: 0}
   exitButton: {fileID: 0}
   exitButton1: {fileID: 0}
-  gearButton: {fileID: 114154056706144262}
-  exitFromPage: {fileID: 114062099974932412}
+  gearButton: {fileID: 0}
+  exitFromPage: {fileID: 0}
 --- !u!114 &114062099974932412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -523,7 +523,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114240149034894006
+--- !u!114 &114879169975827806
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -534,12 +534,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce03e81dd863784d9574ea0eccc72d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PagePrev: Page 1
-  PageNext: Page 2
-  pageTurn: {fileID: 7400000, guid: 9c862e46f61bd0b4b976b1f2427419dd, type: 3}
-  timeToTurnPage: 3
-  anim: {fileID: 0}
-  titles: {fileID: 0}
+  PagePrev: 
+  PageNext: 
+  pageTurn: {fileID: 95567953512580818}
+  timeToTurnPage: 1
+  anim: {fileID: 95567953512580818}
+  animationTime: 0.5
+  animationTime2: 1.2
+  rightSideObjects: {fileID: 0}
+  leftSideObjects: {fileID: 0}
+  settingsIcon: {fileID: 1517456183860360}
+  exitIcon: {fileID: 1283486862604194}
 --- !u!137 &137254470444382718
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -628,7 +633,12 @@ SkinnedMeshRenderer:
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300004, guid: 3e8dabba57fba6d44963c4f98d04b9f9, type: 3}
   m_Bones: []
-  m_BlendShapeWeights: []
+  m_BlendShapeWeights:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0.031237006, y: 0, z: 0.12458157}
