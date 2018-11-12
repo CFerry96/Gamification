@@ -1,14 +1,21 @@
 fileFormatVersion: 2
-guid: 0851cc915e4b284459f34771b0ccc80b
+guid: de42a015aad0ac14b97f5afcbd8da339
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: 15 - Default
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: 9Rock
+    100000: ForestLeaves
+    100002: //RootNode
+    100004: ForestTrunk
+    400000: ForestLeaves
+    400002: //RootNode
+    400004: ForestTrunk
+    2100000: No Name
+    2300000: ForestLeaves
+    2300002: ForestTrunk
+    3300000: ForestLeaves
+    3300002: ForestTrunk
+    4300000: ForestLeaves
+    4300002: ForestTrunk
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +47,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.2
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
