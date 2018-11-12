@@ -7,15 +7,15 @@ public class GyroControls : MonoBehaviour {
     private bool gyroEnabled;
     private Gyroscope gyro;
 
-    private GameObject cameraContainer;
+    public GameObject cameraContainer;
     private Quaternion rot;
 
-	// Use this for initialization
+	
 	void Start () {
 
         cameraContainer = new GameObject("CameraContainer");
-        cameraContainer.transform.position = transform.position;
-        transform.SetParent(cameraContainer.transform);
+        //cameraContainer.transform.position = transform.position;
+        //transform.SetParent(cameraContainer.transform);
 
         gyroEnabled = EnableGyro();
 	}
