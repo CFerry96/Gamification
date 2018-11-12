@@ -13,7 +13,7 @@ public class SwipeScript : MonoBehaviour {
     public float timeToTurnPage;
     public Animator anim;
     public float animationTime, animationTime2;
-    public GameObject rightSideObjects, leftSideObjects;
+    public GameObject rightSideObjects, leftSideObjects, settingsIcon, exitIcon;
 
     private void Start()
     {
@@ -120,9 +120,11 @@ public class SwipeScript : MonoBehaviour {
    
     IEnumerator swipePageLeft()
     {
+        exitIcon.SetActive(false);
         rightSideObjects.SetActive(false);
         anim.SetTrigger("nextPage");
         yield return new WaitForSeconds(animationTime);
+        settingsIcon.SetActive(false);
         leftSideObjects.SetActive(false);
         yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PageNext);
@@ -133,13 +135,14 @@ public class SwipeScript : MonoBehaviour {
     IEnumerator swipePageRight()
     {
         leftSideObjects.SetActive(false);
+        settingsIcon.SetActive(false);
         anim.SetTrigger("previousPage");
         yield return new WaitForSeconds(animationTime);
+        exitIcon.SetActive(false);
         rightSideObjects.SetActive(false);
         yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PagePrev);
         yield return null;
-
     }
 
 }
