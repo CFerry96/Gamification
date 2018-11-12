@@ -11,6 +11,7 @@ public class GoToConstellation : MonoBehaviour {
     private void OnMouseDown()
     {
         clicked = true;
+        soundManager.soundBoy.StartCoroutine("fadeInLayers");
     }
 
     void Update()
@@ -20,6 +21,7 @@ public class GoToConstellation : MonoBehaviour {
             cameraPos.transform.position = Vector3.Lerp(cameraPos.transform.position, transform.position, Time.deltaTime * blackoutTime);
             buttons.SetActive(false);
             blackScreen.SetActive(true);
+            
         }
     }
 }
