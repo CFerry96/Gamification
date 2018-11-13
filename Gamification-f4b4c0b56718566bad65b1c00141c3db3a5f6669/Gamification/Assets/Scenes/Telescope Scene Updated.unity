@@ -242,11 +242,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.199997
+      value: -19.2
       objectReference: {fileID: 0}
     - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 71.9
+      value: 64.5
       objectReference: {fileID: 0}
     - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -39770,6 +39770,10 @@ Prefab:
       propertyPath: m_Name
       value: Star Boi (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4571974824747794, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -21.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
   m_IsPrefabAsset: 0
@@ -49948,11 +49952,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 25.2
+      value: 44.4
       objectReference: {fileID: 0}
     - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 71.1
+      value: 61.8
       objectReference: {fileID: 0}
     - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -79885,7 +79889,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 17.7
+      value: 44.5
       objectReference: {fileID: 0}
     - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
       propertyPath: m_LocalPosition.y
