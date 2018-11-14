@@ -21,15 +21,20 @@ public class audioRec : MonoBehaviour
         }
         if (GUI.Button(new Rect(10, 70, 60, 50), "Save"))
         {
-            SavWav.Save("myfile", myAudioClip);
+            //SavWav.Save("myfile", myAudioClip)"
 
             //        audio.Play();
+
+            AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
         }
         if (GUI.Button(new Rect(10,130, 60, 50), "Play"))
         {
             AudioSource audio = GetComponent<AudioSource>();
-            audio.clip = myAudioClip;
+            //audio.clip = myAudioClip;
+            //audio.Play();
+            AudioSerialisation.LoadAudioClipFromDisk(audio, "myfile");
             audio.Play();
+            
         }
     }
 }
