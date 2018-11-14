@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GoToConstellation : MonoBehaviour {
 
-    public GameObject cameraPos, buttons, blackScreen;
+    public GameObject cameraPos, blackScreen;
+    //public GameObject buttons;
     public float blackoutTime;
     bool clicked = false;
 
@@ -19,7 +20,7 @@ public class GoToConstellation : MonoBehaviour {
         if (clicked == true)
         {
             cameraPos.transform.position = Vector3.Lerp(cameraPos.transform.position, transform.position, Time.deltaTime * blackoutTime);
-            buttons.SetActive(false);
+            //buttons.SetActive(false);
             blackScreen.SetActive(true);
             
         }
