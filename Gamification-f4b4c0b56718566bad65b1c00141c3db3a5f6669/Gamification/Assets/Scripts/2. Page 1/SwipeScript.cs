@@ -9,15 +9,14 @@ public class SwipeScript : MonoBehaviour {
     private bool isDragging;
     private Vector2 startTouch, swipeDelta;
     public string PagePrev, PageNext;
-    public Animator pageTurn;
-    public float timeToTurnPage;
-    public Animator anim;
-    public float animationTime, animationTime2;
+    float timeToTurnPage = 1;
+    Animator anim;
+    float animationTime = 0.5f, animationTime2 = 1.2f;
     public GameObject rightSideObjects, leftSideObjects, settingsIcon, exitIcon;
 
     private void Start()
     {
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
 

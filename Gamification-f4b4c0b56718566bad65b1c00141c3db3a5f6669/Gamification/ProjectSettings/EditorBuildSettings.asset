@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Meditation Scene.unity
     guid: bf9779054a472854d918b9e2b8563dbd
+  - enabled: 1
+    path: Assets/Scenes/Create Scene.unity
+    guid: a26a162e73e5ba241af57118488c5628
   m_configObjects: {}

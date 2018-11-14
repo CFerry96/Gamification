@@ -5,11 +5,13 @@ using UnityEngine;
 public class ChangeSceneforSwipe : MonoBehaviour {
 
     public string ScenetoLoad;
-    public SwipeScript swipe;
+    SwipeScript swipe;
+    GameObject Book;
 
 	// Use this for initialization
 	void Start () {
-
+        Book = GameObject.Find("New Book");
+        swipe = Book.GetComponent<SwipeScript>();
 	}
 
     // Update is called once per frame

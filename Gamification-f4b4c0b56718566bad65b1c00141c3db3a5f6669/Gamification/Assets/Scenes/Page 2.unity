@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44709957, g: 0.49700356, b: 0.57511014, a: 1}
+  m_IndirectSpecularColor: {r: 0.44709975, g: 0.49700356, b: 0.5751106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -250,11 +250,16 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58d1865d504be3c45bea72f25fd26e25, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &561664029 stripped
+--- !u!1 &434426529 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1283486862604194, guid: b2c93ade66b009e4fb696f13c66c22d4,
+  m_CorrespondingSourceObject: {fileID: 1910255212429036, guid: 58d1865d504be3c45bea72f25fd26e25,
     type: 2}
-  m_PrefabInternal: {fileID: 1070195439}
+  m_PrefabInternal: {fileID: 434426528}
+--- !u!1 &434426530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1029664878979292, guid: 58d1865d504be3c45bea72f25fd26e25,
+    type: 2}
+  m_PrefabInternal: {fileID: 434426528}
 --- !u!114 &1050030992 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114029443290964692, guid: 58d1865d504be3c45bea72f25fd26e25,
@@ -334,12 +339,12 @@ Prefab:
         type: 2}
       propertyPath: gearButton
       value: 
-      objectReference: {fileID: 1909636890}
+      objectReference: {fileID: 0}
     - target: {fileID: 114004160091723066, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: exitFromPage
       value: 
-      objectReference: {fileID: 1168701911}
+      objectReference: {fileID: 0}
     - target: {fileID: 114240149034894006, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: pageTurn
@@ -364,12 +369,12 @@ Prefab:
         type: 2}
       propertyPath: settingsIcon
       value: 
-      objectReference: {fileID: 1938632079}
+      objectReference: {fileID: 0}
     - target: {fileID: 114240149034894006, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: exitIcon
       value: 
-      objectReference: {fileID: 561664029}
+      objectReference: {fileID: 0}
     - target: {fileID: 114240149034894006, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: timeToTurnPage
@@ -379,12 +384,12 @@ Prefab:
         type: 2}
       propertyPath: leftSideObjects
       value: 
-      objectReference: {fileID: 1938632079}
+      objectReference: {fileID: 0}
     - target: {fileID: 114240149034894006, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: rightSideObjects
       value: 
-      objectReference: {fileID: 561664029}
+      objectReference: {fileID: 0}
     - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: PagePrev
@@ -394,12 +399,12 @@ Prefab:
         type: 2}
       propertyPath: leftSideObjects
       value: 
-      objectReference: {fileID: 1938632079}
+      objectReference: {fileID: 434426530}
     - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: rightSideObjects
       value: 
-      objectReference: {fileID: 561664029}
+      objectReference: {fileID: 434426529}
     - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: PageNext
@@ -410,15 +415,39 @@ Prefab:
       propertyPath: pageTurn
       value: 
       objectReference: {fileID: 348570515}
+    - target: {fileID: 114252682496787466, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: rightSideObjects
+      value: 
+      objectReference: {fileID: 434426529}
+    - target: {fileID: 114252682496787466, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: exitIcon
+      value: 
+      objectReference: {fileID: 434426529}
+    - target: {fileID: 114252682496787466, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: leftSideObjects
+      value: 
+      objectReference: {fileID: 434426530}
+    - target: {fileID: 114252682496787466, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: settingsIcon
+      value: 
+      objectReference: {fileID: 434426530}
+    - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: exitIcon
+      value: 
+      objectReference: {fileID: 434426529}
+    - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
+        type: 2}
+      propertyPath: settingsIcon
+      value: 
+      objectReference: {fileID: 434426530}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1168701911 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114280706940620568, guid: 58d1865d504be3c45bea72f25fd26e25,
-    type: 2}
-  m_PrefabInternal: {fileID: 434426528}
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1240795448
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +457,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1240795455}
   - component: {fileID: 1240795454}
-  - component: {fileID: 1240795453}
   - component: {fileID: 1240795452}
   - component: {fileID: 1240795451}
   - component: {fileID: 1240795450}
@@ -489,23 +517,6 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 0
---- !u!114 &1240795453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1240795448}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33021e9456647dc45807ba37c87938c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Black: {fileID: 0}
-  target: {fileID: 0}
-  blackoutTime: 3
-  drawing: {fileID: 0}
-  yourArt: {fileID: 0}
-  SceneToLoad: 
 --- !u!20 &1240795454
 Camera:
   m_ObjectHideFlags: 0
@@ -641,14 +652,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1718554587485852, guid: 58d1865d504be3c45bea72f25fd26e25,
     type: 2}
   m_PrefabInternal: {fileID: 434426528}
---- !u!114 &1909636890 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114736135525432492, guid: 58d1865d504be3c45bea72f25fd26e25,
-    type: 2}
-  m_PrefabInternal: {fileID: 434426528}
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &1938632079 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1517456183860360, guid: b2c93ade66b009e4fb696f13c66c22d4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1070195439}
