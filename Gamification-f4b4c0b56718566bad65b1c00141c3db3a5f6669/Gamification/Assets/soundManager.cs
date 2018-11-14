@@ -5,6 +5,7 @@ using UnityEngine;
 public class soundManager : MonoBehaviour {
     public static soundManager soundBoy = null;
     public AudioSource baseTrack, layerTrack, finalTrack;
+    public AudioSource note1, note2, note3;
     public float fadeInTime;
     public float fadeOutTime;
     //public static soundManager instance = null;
@@ -35,6 +36,10 @@ public class soundManager : MonoBehaviour {
 		
 	}
 
+    public void playNote(AudioSource note)
+    {
+        note.Play();
+    }
     IEnumerator fadeInLayers()
     {
         bool fadeIn = true;
