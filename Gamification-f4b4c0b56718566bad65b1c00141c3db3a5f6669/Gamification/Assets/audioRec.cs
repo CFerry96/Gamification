@@ -14,7 +14,12 @@ public class audioRec : MonoBehaviour
     }
 
     void Update() {
-        if(maxRecordingTime <= 0)
+        if (recording == true)
+        {
+            maxRecordingTime -= Time.deltaTime;
+            Debug.Log(maxRecordingTime);
+        }
+        if (maxRecordingTime <= 0)
         {
             Microphone.End(null);
             recording = false;
@@ -25,16 +30,17 @@ public class audioRec : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(500, 10, 100, 20), "Time" + maxRecordingTime);
+        
+         GUI.Label(new Rect(500, 10, 100, 20), "Recording:" + maxRecordingTime);
+        
         if (GUI.Button(new Rect(10, 10, 60, 50), "Record"))
         {
-            myAudioClip = Microphone.Start(null, false, 10, 44100);
-            recording = true;
-            StartCoroutine(CountDown());
+            Debug.Log("recording");
+            RecordAudio();
         }
-        if (GUI.Button(new Rect(70, 10, 60, 50), "Stop recording")){
-            Microphone.End(null);
-        }
+        //if (GUI.Button(new Rect(70, 10, 60, 50), "Stop recording")){
+        //    Microphone.End(null);
+        //}
         if (GUI.Button(new Rect(10, 70, 60, 50), "Save"))
         {
             //SavWav.Save("myfile", myAudioClip)"
@@ -53,13 +59,31 @@ public class audioRec : MonoBehaviour
             
         }
     }
-
-    IEnumerator CountDown()
+    void RecordAudio()
     {
-        while (recording == true)
+        if (!recording)
         {
-            maxRecordingTime -= Time.deltaTime;
+            
+            myAudioClip = Microphone.Start(null, false, 10, 44100);
+            Debug.Log("recording for real");
+            recording = true;
+            //StartCoroutine(CountDown());
         }
-        yield return null;
+        else if (recording)
+        {
+            Microphone.End(null);
+            recording = false;
+        }
     }
+    /* IEnumerator CountDown()
+     {
+
+         while (recording == true)
+         {
+             maxRecordingTime -= Time.deltaTime;
+         }
+         yield return null;
+         
+}
+*/
 }
