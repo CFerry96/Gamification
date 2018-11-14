@@ -7,19 +7,32 @@ public class WalkingPauseMenu : MonoBehaviour {
 
     public bool Pause;
     public bool settingsOn;
-    public GameObject Menu;
+    
     public GameObject MovementButtons;
-    public GameObject SettingsMenu;
+    GameObject Menu;
+    GameObject SettingsMenu;
 
-    public Button continueButton;
-    public Button settingsButton;
-    public Button exitButton;
-    public Button exitButton1;
+    CanvasAssigner canvasAssigner;
+    GameObject Canvas;
+
+    Button continueButton;
+    Button settingsButton;
+    Button exitButton;
+    Button exitButton1;
 
     // Use this for initialization
     void Start () {
-        
-	}
+        Canvas = GameObject.Find("Canvas");
+        canvasAssigner = Canvas.GetComponent<CanvasAssigner>();
+
+        continueButton = canvasAssigner.Continue;
+        settingsButton = canvasAssigner.Settings;
+        exitButton = canvasAssigner.Exit;
+        exitButton1 = canvasAssigner.Exit1;
+
+        Menu = canvasAssigner.PauseMenu;
+        SettingsMenu = canvasAssigner.SettingsMenu;
+    }
 	
 	// Update is called once per frame
 	void Update () {
