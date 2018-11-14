@@ -16,6 +16,9 @@ public class audioRec : MonoBehaviour
         {
             myAudioClip = Microphone.Start(null, false, 10, 44100);
         }
+        if (GUI.Button(new Rect(70, 10, 60, 50), "Stop recording")){
+            Microphone.End(null);
+        }
         if (GUI.Button(new Rect(10, 70, 60, 50), "Save"))
         {
             SavWav.Save("myfile", myAudioClip);
