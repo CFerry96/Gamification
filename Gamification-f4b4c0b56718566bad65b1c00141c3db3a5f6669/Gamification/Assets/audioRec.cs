@@ -22,5 +22,11 @@ public class audioRec : MonoBehaviour
 
             //        audio.Play();
         }
+        if (GUI.Button(new Rect(10,130, 60, 50), "Play"))
+        {
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.clip = myAudioClip;
+            audio.Play();
+        }
     }
 }
