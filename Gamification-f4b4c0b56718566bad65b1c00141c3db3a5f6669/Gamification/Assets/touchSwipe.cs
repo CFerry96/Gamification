@@ -9,13 +9,14 @@ public class touchSwipe : MonoBehaviour {
     private Vector3 lp;   //Last touch position
     private float dragDistance;  //minimum distance for a swipe to be registered
     private List<Vector3> touchPositions = new List<Vector3>(); //store all the touch positions in list
-    public Animator anim;
+    Animator anim;
     public string PagePrev, PageNext;
-    public float animationTime, animationTime2;
-    public GameObject rightSideObjects, leftSideObjects;
+    float animationTime = 0.5f, animationTime2 = 1.2f;
+    public GameObject rightSideObjects, leftSideObjects, settingsIcon, exitIcon;
 
     // Use this for initialization
     void Start () {
+        anim = GetComponent<Animator>();
         dragDistance = Screen.height * 20 / 100; //dragDistance is 20% height of the screen 
     }
 
@@ -83,25 +84,27 @@ public class touchSwipe : MonoBehaviour {
 
     IEnumerator swipePageLeft()
     {
+        exitIcon.SetActive(false);
         rightSideObjects.SetActive(false);
         anim.SetTrigger("nextPage");
         yield return new WaitForSeconds(animationTime);
+        settingsIcon.SetActive(false);
         leftSideObjects.SetActive(false);
         yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PageNext);
         yield return null;
-
     }
 
     IEnumerator swipePageRight()
     {
         leftSideObjects.SetActive(false);
+        settingsIcon.SetActive(false);
         anim.SetTrigger("previousPage");
         yield return new WaitForSeconds(animationTime);
+        exitIcon.SetActive(false);
         rightSideObjects.SetActive(false);
         yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PagePrev);
         yield return null;
-
     }
 }

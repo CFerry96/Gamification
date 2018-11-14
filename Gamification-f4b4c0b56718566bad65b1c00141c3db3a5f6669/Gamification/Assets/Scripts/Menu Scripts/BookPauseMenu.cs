@@ -8,33 +8,52 @@ public class BookPauseMenu : MonoBehaviour {
 
     public bool isPaused;
     public bool settingsOn;
-    public GameObject Menu;
-    public GameObject SettingsMenu;
+    GameObject Menu;
+    GameObject SettingsMenu;
 
-    public Button continueButton;
-    public Button settingsButton;
-    public Button exitButton;
-    public Button exitButton1;
-    public Button gearButton;
-    public Button exitFromPage;
+    CanvasAssigner canvasAssigner;
+    GameObject Canvas;
 
+    Button continueButton;
+    Button settingsButton;
+    Button exitButton;
+    Button exitButton1;
+    Button gearButton;
+    Button exitFromPage;
+
+    private void Awake()
+    {
+        Canvas = GameObject.Find("Canvas");
+        canvasAssigner = Canvas.GetComponent<CanvasAssigner>();
+    }
     // Use this for initialization
     void Start()
     {
-        Button btn1 = gearButton.GetComponent<Button>();
-        Button btn2 = exitFromPage.GetComponent<Button>();
-        btn1.onClick.AddListener(Settings);
-        btn2.onClick.AddListener(Gtfo);
+        
+
+        gearButton = GameObject.Find("Settings Icon").GetComponent<Button>();
+        exitFromPage = GameObject.Find("Exit Icon").GetComponent<Button>();
+
+        continueButton = canvasAssigner.Continue;
+        settingsButton = canvasAssigner.Settings;
+        exitButton = canvasAssigner.Exit;
+        exitButton1 = canvasAssigner.Exit1;
+
+        Menu = canvasAssigner.PauseMenu;
+        SettingsMenu = canvasAssigner.SettingsMenu;
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
         continueButton.onClick.AddListener(Continue);
         settingsButton.onClick.AddListener(Settings);
         exitButton.onClick.AddListener(Exit);
         exitButton1.onClick.AddListener(Exit);
+        gearButton.onClick.AddListener(Settings);
+        exitFromPage.onClick.AddListener(Gtfo);
 
         if (isPaused == true)
         {
@@ -70,19 +89,19 @@ public class BookPauseMenu : MonoBehaviour {
             }
         }
     }
-    void Continue()
+    public void Continue()
     {
         isPaused = false;
         settingsOn = false;
     }
 
-    void Settings()
+    public void Settings()
     {
         isPaused = false;
         settingsOn = true;
     }
 
-    void Exit()
+    public void Exit()
     {
         if (settingsOn == true)
         {
@@ -94,7 +113,7 @@ public class BookPauseMenu : MonoBehaviour {
         }
     }
 
-    void Gtfo()
+    public void Gtfo()
     {
         Application.Quit();
     }
