@@ -5457,8 +5457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e646f252d1097f41900565751c4b7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPos: {fileID: 1434753106}
   blackScreen: {fileID: 1979378732}
+  focus: {fileID: 781224339}
   blackoutTime: 2
 --- !u!1 &292820909
 GameObject:
@@ -5564,9 +5564,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &292820915
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -10427,9 +10424,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &392885950
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -15084,7 +15078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445490080}
   m_Layer: 0
-  m_Name: Settings Menu
+  m_Name: SettingsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15328,9 +15322,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &486805815
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -20030,9 +20021,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &547702831
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -25125,9 +25113,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &683814544
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -29727,7 +29712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 710987673}
   m_Layer: 0
-  m_Name: Pause Menu
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29888,9 +29873,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &743972401
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -34585,9 +34567,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &760420589
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -39224,6 +39203,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &781224339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781224340}
+  m_Layer: 0
+  m_Name: Focus Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &781224340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 781224339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.2, y: 1.56, z: -44.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 886855225}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &795252416
 Prefab:
   m_ObjectHideFlags: 0
@@ -39468,6 +39475,7 @@ GameObject:
   - component: {fileID: 841818857}
   - component: {fileID: 841818856}
   - component: {fileID: 841818861}
+  - component: {fileID: 841818860}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -39554,6 +39562,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &841818860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 841818855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d1b77f321c64c4199d2059ac89355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseMenu: {fileID: 0}
+  SettingsMenu: {fileID: 0}
+  Continue: {fileID: 0}
+  Settings: {fileID: 0}
+  Exit: {fileID: 0}
+  Exit1: {fileID: 0}
 --- !u!222 &841818861
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39734,9 +39759,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &870433952
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -44420,6 +44442,7 @@ Transform:
   - {fileID: 743972399}
   - {fileID: 683814542}
   - {fileID: 292820913}
+  - {fileID: 781224340}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -18.007, y: 0, z: 0}
@@ -44809,9 +44832,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &950153418
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -49668,9 +49688,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &1071498458
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -54490,9 +54507,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &1150801607
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -59446,9 +59460,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &1281408718
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -64194,9 +64205,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &1415275410
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -69053,9 +69061,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &1439512005
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -73847,9 +73852,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &1518248744
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -78502,13 +78504,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pause: 0
   settingsOn: 0
-  Menu: {fileID: 710987672}
-  MovementButtons: {fileID: 0}
-  SettingsMenu: {fileID: 445490079}
-  continueButton: {fileID: 640213825}
-  settingsButton: {fileID: 188744353}
-  exitButton: {fileID: 1751091010}
-  exitButton1: {fileID: 566393923}
 --- !u!1001 &1543997825
 Prefab:
   m_ObjectHideFlags: 0
@@ -79609,9 +79604,6 @@ MonoBehaviour:
   boxVisual: {fileID: 0}
   drawingMaxPoints: 6
   ps: {fileID: 0}
-  note1: {fileID: 0}
-  note2: {fileID: 0}
-  note3: {fileID: 0}
 --- !u!199 &1978624135
 ParticleSystemRenderer:
   serializedVersion: 6

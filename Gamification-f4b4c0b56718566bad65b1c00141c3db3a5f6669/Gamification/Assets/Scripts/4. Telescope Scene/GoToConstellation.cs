@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class GoToConstellation : MonoBehaviour {
 
-    public GameObject cameraPos, blackScreen;
+    public GameObject blackScreen, focus;
     //public GameObject buttons;
     public float blackoutTime;
     bool clicked = false;
+    GyroControls gyroControls;
+    GameObject cameraPos;
+
+
+    private void Start()
+    {
+        cameraPos = GameObject.Find("Main Camera");
+
+        gyroControls = cameraPos.GetComponent<GyroControls>();
+    }
+
 
     private void OnMouseDown()
     {
@@ -19,10 +30,13 @@ public class GoToConstellation : MonoBehaviour {
     {
         if (clicked == true)
         {
-            cameraPos.transform.position = Vector3.Lerp(cameraPos.transform.position, transform.position, Time.deltaTime * blackoutTime);
+            cameraPos.transform.position = Vector3.Lerp(cameraPos.transform.position, focus.transform.position, Time.deltaTime * blackoutTime);
             //buttons.SetActive(false);
             blackScreen.SetActive(true);
-            
+            gyroControls.enabled = false;
+            cameraPos.transform.rotation = Quaternion.Slerp(cameraPos.transform.rotation, focus.transform.rotation, Time.deltaTime);
+         
+                 
         }
     }
 }

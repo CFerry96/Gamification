@@ -8,7 +8,7 @@ public class WalkingPauseMenu : MonoBehaviour {
     public bool Pause;
     public bool settingsOn;
     
-    public GameObject MovementButtons;
+    //public GameObject MovementButtons;
     GameObject Menu;
     GameObject SettingsMenu;
 
@@ -46,7 +46,7 @@ public class WalkingPauseMenu : MonoBehaviour {
         if (Pause == true)
         {
             Menu.SetActive(true);
-            MovementButtons.SetActive(false);
+            //MovementButtons.SetActive(false);
             Time.timeScale = 0f;
         }
 
@@ -56,7 +56,7 @@ public class WalkingPauseMenu : MonoBehaviour {
             if (settingsOn == false)
             {
                 Time.timeScale = 1f;
-                MovementButtons.SetActive(true);
+                //MovementButtons.SetActive(true);
             }
         }
 

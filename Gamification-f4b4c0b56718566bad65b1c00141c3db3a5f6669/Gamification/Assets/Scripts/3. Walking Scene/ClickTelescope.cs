@@ -14,6 +14,14 @@ public class ClickTelescope : MonoBehaviour {
     public Transform playerTransform;
     public movementScript ms;
     bool clicked = false;
+    GameObject camera;
+    GyroControls gyroControls;
+
+    private void Start()
+    {
+        camera = GameObject.Find("Camera");
+        gyroControls = camera.GetComponent<GyroControls>();
+    }
 
     void OnMouseDown()
     {
@@ -38,6 +46,8 @@ public class ClickTelescope : MonoBehaviour {
             ms.enabled = false;
 
             StartCoroutine(SceneChange());
+
+            
         }
     }
 
