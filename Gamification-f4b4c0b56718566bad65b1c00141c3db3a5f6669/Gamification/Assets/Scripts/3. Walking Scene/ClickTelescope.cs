@@ -13,6 +13,7 @@ public class ClickTelescope : MonoBehaviour {
     public float blackoutTime;
     public Transform playerTransform;
     public movementScript ms;
+    public Transform finalWaypoint;
     bool clicked = false;
     GameObject camera;
     GyroControls gyroControls;
@@ -25,7 +26,7 @@ public class ClickTelescope : MonoBehaviour {
 
     void OnMouseDown()
     {
-        if (Vector3.Distance(playerTransform.position, this.transform.position) <= 6)
+        if (Vector3.Distance(playerTransform.position, this.transform.position) <= Vector3.Distance(finalWaypoint.position, this.transform.position))
         {
             clicked = true;
         }
@@ -44,6 +45,7 @@ public class ClickTelescope : MonoBehaviour {
             playerTransform.rotation = Quaternion.RotateTowards(playerTransform.transform.rotation, target.rotation, 90 * Time.deltaTime);
 
             ms.enabled = false;
+            gyroControls.enabled=false;
 
             StartCoroutine(SceneChange());
 

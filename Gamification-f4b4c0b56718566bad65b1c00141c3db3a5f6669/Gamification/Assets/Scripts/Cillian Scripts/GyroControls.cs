@@ -9,14 +9,14 @@ public class GyroControls : MonoBehaviour {
 	void Start ()
     {
         Input.gyro.enabled = true;
-        var x = Input.gyro.rotationRateUnbiased.x;
-        var y = Input.gyro.rotationRateUnbiased.y;
-
+        //var x = Input.gyro.rotationRateUnbiased.x;
+        //var y = Input.gyro.rotationRateUnbiased.y;
     }
 
     void Update()
     {
-        
+
+        //this.transform.rotation = new Quaternion(-Input.gyro.rotationRateUnbiased.x * rotSpeed, -Input.gyro.rotationRateUnbiased.y * rotSpeed, 0, 1);
         this.transform.Rotate(-Input.gyro.rotationRateUnbiased.x * rotSpeed, -Input.gyro.rotationRateUnbiased.y*rotSpeed, 0);
     }
 }
