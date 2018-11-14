@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5ad325c2c5f049be7cc312f12bc59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recordingTime: 30
+  recording: 0
 --- !u!4 &143459480
 Transform:
   m_ObjectHideFlags: 0
