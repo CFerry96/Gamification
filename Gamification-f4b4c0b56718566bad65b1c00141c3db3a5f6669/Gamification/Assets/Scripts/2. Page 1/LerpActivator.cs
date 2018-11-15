@@ -16,7 +16,7 @@ public class LerpActivator : MonoBehaviour {
 
     void OnMouseDown()
     {
-        Book.GetComponent<SwipeScript>().enabled = false;
+        Book.GetComponent<touchSwipe>().enabled = false;
         lc = Camera.GetComponent<LerpingCamera>();
         lc.enabled = true;
     }
