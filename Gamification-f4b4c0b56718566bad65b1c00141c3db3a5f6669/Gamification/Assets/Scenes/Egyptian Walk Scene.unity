@@ -481,9 +481,10 @@ MonoBehaviour:
   Black: {fileID: 368368568}
   target: {fileID: 206938915}
   SceneToLoad: Telescope Scene Updated
-  blackoutTime: 5
+  blackoutTime: 2
   playerTransform: {fileID: 410888529}
   ms: {fileID: 410888528}
+  finalWaypoint: {fileID: 323887594}
 --- !u!65 &52370641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -791,6 +792,7 @@ MonoBehaviour:
   blackoutTime: 5
   playerTransform: {fileID: 410888529}
   ms: {fileID: 410888528}
+  finalWaypoint: {fileID: 0}
 --- !u!1001 &183702784
 Prefab:
   m_ObjectHideFlags: 0
@@ -1547,7 +1549,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 323887593}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.73, y: -13.775, z: 90.82}
+  m_LocalPosition: {x: 4.73, y: -13.775, z: 86.6}
   m_LocalScale: {x: 1, y: 1, z: 1.7765}
   m_Children: []
   m_Father: {fileID: 621577047}
@@ -1930,7 +1932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  playerSpeed: 2
+  playerSpeed: 11
   headBobMultiplier: 2
   headBobCycleSpeed: 2
 --- !u!4 &410888529
