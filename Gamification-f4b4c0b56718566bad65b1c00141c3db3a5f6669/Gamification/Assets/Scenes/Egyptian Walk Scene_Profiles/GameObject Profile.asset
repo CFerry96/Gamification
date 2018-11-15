@@ -29,7 +29,7 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 1
+    value: 0
   gradingMode:
     overrideState: 0
     value: 1
@@ -1342,7 +1342,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 20
+    value: 14.21
   threshold:
     overrideState: 1
     value: 1
