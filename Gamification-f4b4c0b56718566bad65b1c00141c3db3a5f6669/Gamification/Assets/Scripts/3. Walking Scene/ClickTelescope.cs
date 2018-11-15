@@ -26,8 +26,9 @@ public class ClickTelescope : MonoBehaviour {
 
     void OnMouseDown()
     {
-        if (Vector3.Distance(playerTransform.position, this.transform.position) <= Vector3.Distance(finalWaypoint.position, this.transform.position))
+        if (Vector3.Distance(playerTransform.position, this.transform.position) <= Vector3.Distance(finalWaypoint.position, this.transform.position) + 1)
         {
+            Debug.Log("clicked");
             clicked = true;
         }
     }

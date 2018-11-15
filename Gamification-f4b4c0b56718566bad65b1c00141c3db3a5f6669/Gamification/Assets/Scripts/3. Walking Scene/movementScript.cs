@@ -50,7 +50,7 @@ public class movementScript : MonoBehaviour {
         {
             activeWaypoint = waypoints.Length;
         }
-        transform.rotation = Quaternion.Slerp(transform.rotation, waypoints[activeWaypoint].transform.rotation, Time.deltaTime);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, waypoints[activeWaypoint].transform.rotation, Time.deltaTime);
     }
 
     
