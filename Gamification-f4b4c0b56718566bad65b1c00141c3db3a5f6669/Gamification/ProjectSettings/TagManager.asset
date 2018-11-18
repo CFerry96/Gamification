@@ -8,6 +8,7 @@ TagManager:
   - buttonNext
   - Interactable
   - Waypoint
+  - Spotlight
   layers:
   - Default
   - TransparentFX
