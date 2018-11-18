@@ -5,7 +5,8 @@ using UnityEngine;
 public class ChangeSceneforSwipe : MonoBehaviour {
 
     public string ScenetoLoad;
-    touchSwipe swipe;
+    SwipeScript swipeScript;
+    touchSwipe touchswipe;
     GameObject Book;
     public string KingdomName;
     public GameObject Spotlight;
@@ -16,8 +17,9 @@ public class ChangeSceneforSwipe : MonoBehaviour {
         Book = GameObject.Find("New Book");
         Spotlight = GameObject.Find(KingdomName + " Spot Light");
         Spotlight.SetActive(false);
-        swipe = Book.GetComponent<touchSwipe>();
-	}
+        touchswipe = Book.GetComponent<touchSwipe>();
+        swipeScript = Book.GetComponent<SwipeScript>();
+    }
 
     // Update is called once per frame
     private void OnMouseDown()
@@ -27,7 +29,8 @@ public class ChangeSceneforSwipe : MonoBehaviour {
             Spotlights[i].SetActive(false);
         }
         Spotlight.SetActive(true);
-        swipe.PageNext = ScenetoLoad;
+        touchswipe.PageNext = ScenetoLoad;
+        swipeScript.PageNext = ScenetoLoad;
     }
     private void Update()
     {
