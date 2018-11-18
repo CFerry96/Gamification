@@ -329,6 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 346861113}
   - component: {fileID: 346861114}
+  - component: {fileID: 346861115}
   m_Layer: 0
   m_Name: Forest Spot Light
   m_TagString: Spotlight
@@ -386,6 +387,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &346861115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 346861112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f2e0084e4e35843ada7ddee92db616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &406273108
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 406273109}
   - component: {fileID: 406273110}
+  - component: {fileID: 406273111}
   m_Layer: 0
   m_Name: Desert Spot Light
   m_TagString: Spotlight
@@ -452,6 +465,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &406273111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406273108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f2e0084e4e35843ada7ddee92db616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &433206031
 Prefab:
   m_ObjectHideFlags: 0
@@ -2011,6 +2035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1629369107}
   - component: {fileID: 1629369108}
+  - component: {fileID: 1629369109}
   m_Layer: 0
   m_Name: Polar Spot Light
   m_TagString: Spotlight
@@ -2068,6 +2093,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1629369109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629369106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f2e0084e4e35843ada7ddee92db616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1646017318 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: cb9574da540d3d94d8d3d33305e93bdc,
@@ -2412,6 +2448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810355326}
   - component: {fileID: 1810355327}
+  - component: {fileID: 1810355328}
   m_Layer: 0
   m_Name: Mountain Spot Light
   m_TagString: Spotlight
@@ -2469,6 +2506,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1810355328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810355325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f2e0084e4e35843ada7ddee92db616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1830359189
 Prefab:
   m_ObjectHideFlags: 0
