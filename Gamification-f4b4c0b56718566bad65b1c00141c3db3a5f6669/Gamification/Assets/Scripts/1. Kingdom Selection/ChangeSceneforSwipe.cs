@@ -27,6 +27,7 @@ public class ChangeSceneforSwipe : MonoBehaviour {
     {
         if (Spotlights.Length == 0)
         {
+            soundManager.soundBoy.StartCoroutine("fadeInLayers");
             for (int i = 0; i < Spotlights.Length; i++)
             {
                 Spotlights[i].SetActive(false);
