@@ -12,6 +12,7 @@ public class ChangeSceneforSwipe : MonoBehaviour {
     public GameObject Spotlight;
     public GameObject[] Spotlights;
 
+
 	// Use this for initialization
 	void Start () {
         Book = GameObject.Find("New Book");
@@ -24,13 +25,32 @@ public class ChangeSceneforSwipe : MonoBehaviour {
     // Update is called once per frame
     private void OnMouseDown()
     {
-        for (int i = 0; i < Spotlights.Length; i++)
+        if (Spotlights.Length == 0)
         {
-            Spotlights[i].SetActive(false);
+            for (int i = 0; i < Spotlights.Length; i++)
+            {
+                Spotlights[i].SetActive(false);
+            }
+            Spotlight.SetActive(true);
+            touchswipe.PageNext = ScenetoLoad;
+            swipeScript.PageNext = ScenetoLoad;
         }
-        Spotlight.SetActive(true);
-        touchswipe.PageNext = ScenetoLoad;
-        swipeScript.PageNext = ScenetoLoad;
+        else if (Spotlights.Length > 0)
+        {
+            if (Spotlight != Spotlights[0])
+            {
+                for (int i = 0; i < Spotlights.Length; i++)
+                {
+                    Spotlights[i].SetActive(false);
+                }
+                Spotlight.SetActive(true);
+                touchswipe.PageNext = ScenetoLoad;
+                swipeScript.PageNext = ScenetoLoad;
+            }
+            else {
+
+            }
+        }
     }
     private void Update()
     {
