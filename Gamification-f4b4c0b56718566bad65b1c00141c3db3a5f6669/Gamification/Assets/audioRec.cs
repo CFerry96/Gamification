@@ -46,6 +46,9 @@ public class audioRec : MonoBehaviour
             //SavWav.Save("myfile", myAudioClip)"
 
             //        audio.Play();
+            Microphone.End(null);
+            recording = false;
+            maxRecordingTime = recordingTime;
 
             AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
         }
