@@ -16,7 +16,7 @@ public class CameraGyro : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        camParent.transform.Rotate(0, -Input.gyro.rotationRateUnbiased.y, 0);
-        this.transform.Rotate(-Input.gyro.rotationRateUnbiased.x, 0, 0);
+        camParent.transform.Rotate(0, -Input.gyro.rotationRateUnbiased.y * 1.7f, 0);
+        this.transform.Rotate(-Input.gyro.rotationRateUnbiased.x * 1.7f, 0, 0);
 	}
 }
