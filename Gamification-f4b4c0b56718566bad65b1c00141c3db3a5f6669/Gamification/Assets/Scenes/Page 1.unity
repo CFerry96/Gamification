@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42791152, g: 0.23397133, b: 0.49010128, a: 1}
+  m_IndirectSpecularColor: {r: 0.43100864, g: 0.23310554, b: 0.4899227, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -929,11 +929,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 765370216}
   m_LocalRotation: {x: 0.28704768, y: 0.66699773, z: 0.6730629, w: -0.14037132}
-  m_LocalPosition: {x: -4.4866037, y: 3.5105302, z: -12.69112}
-  m_LocalScale: {x: 0.6764181, y: 0.6764179, z: 0.6764177}
+  m_LocalPosition: {x: -0.081419945, y: -0.29946995, z: 0.9058895}
+  m_LocalScale: {x: 0.6764188, y: 0.67641836, z: 0.67641795}
   m_Children: []
-  m_Father: {fileID: 1227973682}
-  m_RootOrder: 8
+  m_Father: {fileID: 779469978}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 258.083, y: -74.67798, z: -69.941986}
 --- !u!212 &765370218
 SpriteRenderer:
@@ -1024,8 +1024,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.405184, y: 3.8100002, z: -13.59701}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1227973682}
+  m_Children:
+  - {fileID: 765370217}
+  - {fileID: 899738614}
+  m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &863179423
@@ -1261,11 +1263,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 899738613}
   m_LocalRotation: {x: 0.7031161, y: 0.220891, z: -0.2025777, w: 0.6448234}
-  m_LocalPosition: {x: -4.0047436, y: 3.3928301, z: -13.038119}
-  m_LocalScale: {x: 0.6764175, y: 0.6764174, z: 0.6764174}
+  m_LocalPosition: {x: 0.40044022, y: -0.41717005, z: 0.55889034}
+  m_LocalScale: {x: 0.6764176, y: 0.6764174, z: 0.6764174}
   m_Children: []
-  m_Father: {fileID: 1227973682}
-  m_RootOrder: 9
+  m_Father: {fileID: 779469978}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 94.951996, y: 0, z: -34.88098}
 --- !u!212 &899738615
 SpriteRenderer:
@@ -1732,12 +1734,9 @@ Transform:
   - {fileID: 1584265963}
   - {fileID: 1252784170}
   - {fileID: 396992909}
-  - {fileID: 779469978}
-  - {fileID: 765370217}
-  - {fileID: 899738614}
   - {fileID: 1797473397}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1252784170 stripped
 Transform:
@@ -2101,12 +2100,12 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6bbfdaece5980a3409e48037c7ff5719, type: 2}
+      objectReference: {fileID: 2100000, guid: f0605bfc0746962468a52c7aa487664d, type: 2}
     - target: {fileID: 137254470444382718, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6bbfdaece5980a3409e48037c7ff5719, type: 2}
+      objectReference: {fileID: 2100000, guid: f0605bfc0746962468a52c7aa487664d, type: 2}
     - target: {fileID: 114252682496787466, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: m_Enabled
@@ -2635,7 +2634,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1724102272578412, guid: 58d1865d504be3c45bea72f25fd26e25, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58d1865d504be3c45bea72f25fd26e25, type: 2}
@@ -2739,7 +2738,7 @@ Transform:
   - {fileID: 2020458751}
   - {fileID: 272528661}
   m_Father: {fileID: 1227973682}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1814194704
 Prefab:
