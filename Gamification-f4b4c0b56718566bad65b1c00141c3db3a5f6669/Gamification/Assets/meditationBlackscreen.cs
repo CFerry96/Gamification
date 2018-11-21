@@ -14,7 +14,7 @@ public class meditationBlackscreen : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         sp = GetComponent<SpriteRenderer>();
-        theta = -1;
+        theta = -2;
 	}
 	
 	// Update is called once per frame
