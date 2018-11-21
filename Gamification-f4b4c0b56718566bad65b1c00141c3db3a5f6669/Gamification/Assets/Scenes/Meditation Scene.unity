@@ -6407,7 +6407,7 @@ MonoBehaviour:
   startPoint: {x: 0, y: 0, z: 0}
   endPoint: {x: 0, y: 0, z: 0}
   initialZ: 700
-  finalZ: 260
+  finalZ: 290
   rateOfExpansion: 5
 --- !u!114 &1529897520
 MonoBehaviour:
