@@ -21,8 +21,13 @@ public class drawingScript : MonoBehaviour
         boxVisual = GetComponent<Renderer>();
         materialColour = GetComponent<Renderer>().material;
         lr.positionCount = 0;
-        ps = GetComponent<ParticleSystem>();
-        ps.Stop();
+        Color c1 = new Color(237, 201, 20);
+        //lr.SetColors(c1, c1);
+        ps= GetComponent<ParticleSystem>();
+        //ps[0].Stop();
+        ps.Play();
+        //ps.Stop();
+        boxVisual.enabled = false;
     }
 
     // Update is called once per frame
@@ -40,13 +45,41 @@ public class drawingScript : MonoBehaviour
         if (endingTriggered && !alreadyClicked)
         {
             boxVisual.enabled = false;
+            ps.Stop();
         }
+
+        //if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        //{
+        //    // Get movement of the finger since last frame
+        //    Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+        //    lr.SetPosition(clickNumber, touchDeltaPosition);
+
+        //    // Move object across XY plane
+        //    //transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
+        //}
+
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    lr.positionCount++;
+            
+            
+        //}
+        //if (Input.GetMouseButton(0))
+        //{
+        //    lr.SetPosition(clickNumber, new Vector3(Input.mousePosition.z, Input.mousePosition.y, Input.mousePosition.x));
+        //}
+
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    lr.positionCount--;
+        //}
     }
 
     public void clicked()
     {
         if (!alreadyClicked && !endingTriggered)
         {
+            boxVisual.enabled = true;
             ps.Play();
             lr.positionCount++;
             //if (lr.positionCount ==1)
@@ -79,7 +112,7 @@ public class drawingScript : MonoBehaviour
             //gameController.control.point1 = 50000;
 
             clickNumber++;
-            var tempColor = new Color(255, 0, 0, 0);
+            var tempColor = new Color(237, 201, 20, 255);
             materialColour.color = tempColor;
 
             alreadyClicked = true;
