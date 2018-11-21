@@ -114,6 +114,7 @@ public class drawingScript : MonoBehaviour
             clickNumber++;
             var tempColor = new Color(237, 201, 20, 255);
             materialColour.color = tempColor;
+            //
 
             alreadyClicked = true;
         }
