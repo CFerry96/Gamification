@@ -9,8 +9,13 @@ public class constellationEmbiggen : MonoBehaviour {
     public float finalZ;
     public float rateOfExpansion;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+
+    private void Awake()
+    {
+        persistence.control.Load();
+    }
+    void Start () {
         startPoint = new Vector3(transform.position.x, transform.position.y, initialZ);
         endPoint = new Vector3(transform.position.x, transform.position.y, finalZ);
 	}
