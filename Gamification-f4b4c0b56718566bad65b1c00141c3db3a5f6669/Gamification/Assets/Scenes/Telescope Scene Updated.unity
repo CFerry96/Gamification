@@ -373,7 +373,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &106931359 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1,
+  m_CorrespondingSourceObject: {fileID: 4785566198292276, guid: 9c5742e293c0afb4a9c406b6b8c2d897,
     type: 2}
   m_PrefabInternal: {fileID: 1469119675}
 --- !u!4 &110997531 stripped
@@ -74107,66 +74107,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 870433950}
     m_Modifications:
-    - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
+    - target: {fileID: 4785566198292276, guid: 9c5742e293c0afb4a9c406b6b8c2d897, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.019561768
       objectReference: {fileID: 0}
-    - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
+    - target: {fileID: 4785566198292276, guid: 9c5742e293c0afb4a9c406b6b8c2d897, type: 2}
       propertyPath: m_LocalPosition.y
       value: -0.59220886
       objectReference: {fileID: 0}
-    - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
+    - target: {fileID: 4785566198292276, guid: 9c5742e293c0afb4a9c406b6b8c2d897, type: 2}
       propertyPath: m_LocalPosition.z
       value: 1.8020875
       objectReference: {fileID: 0}
-    - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
+    - target: {fileID: 4785566198292276, guid: 9c5742e293c0afb4a9c406b6b8c2d897, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0.15649594
       objectReference: {fileID: 0}
-    - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
+    - target: {fileID: 4785566198292276, guid: 9c5742e293c0afb4a9c406b6b8c2d897, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
+    - target: {fileID: 4785566198292276, guid: 9c5742e293c0afb4a9c406b6b8c2d897, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
+    - target: {fileID: 4785566198292276, guid: 9c5742e293c0afb4a9c406b6b8c2d897, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0.98767865
       objectReference: {fileID: 0}
-    - target: {fileID: 4678530597665056, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
+    - target: {fileID: 4785566198292276, guid: 9c5742e293c0afb4a9c406b6b8c2d897, type: 2}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1988438715356940, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
-      propertyPath: m_Name
-      value: Star Boi (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571974824747794, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571974824747794, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571974824747794, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 198160105735487464, guid: 2211d841e42131e40b75ce63721cf6a1,
-        type: 2}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 199103953371938738, guid: 2211d841e42131e40b75ce63721cf6a1,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2211d841e42131e40b75ce63721cf6a1, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 9c5742e293c0afb4a9c406b6b8c2d897, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1475609409
 Prefab:
