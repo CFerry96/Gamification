@@ -8,7 +8,7 @@ public class objectInteraction : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-
+        cam = GetComponent<Camera>();
     }
 
     // Update is called once per frame
