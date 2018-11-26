@@ -12,12 +12,15 @@ public class touchSwipe : MonoBehaviour {
     Animator anim;
     public string PagePrev, PageNext;
     float animationTime = 0.5f, animationTime2 = 1.2f;
-    public GameObject rightSideObjects, leftSideObjects, settingsIcon, exitIcon;
+    //public GameObject rightSideObjects, leftSideObjects, settingsIcon, exitIcon;
+    public GameObject[] leftsideObjects, rightsideObjects;
 
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
         dragDistance = Screen.height * 20 / 100; //dragDistance is 20% height of the screen 
+        leftsideObjects = GameObject.FindGameObjectsWithTag("leftside");
+        rightsideObjects = GameObject.FindGameObjectsWithTag("rightside");
     }
 
     // Update is called once per frame
@@ -84,12 +87,20 @@ public class touchSwipe : MonoBehaviour {
 
     IEnumerator swipePageLeft()
     {
-        exitIcon.SetActive(false);
-        rightSideObjects.SetActive(false);
+        //exitIcon.SetActive(false);
+        //rightSideObjects.SetActive(false);
+        foreach (GameObject right in rightsideObjects)
+        {
+            right.SetActive(false);
+        }
         anim.SetTrigger("nextPage");
         yield return new WaitForSeconds(animationTime);
-        settingsIcon.SetActive(false);
-        leftSideObjects.SetActive(false);
+        foreach (GameObject left in leftsideObjects)
+        {
+            left.SetActive(false);
+        }
+        //settingsIcon.SetActive(false);
+        //leftSideObjects.SetActive(false);
         yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PageNext);
         yield return null;
@@ -97,12 +108,20 @@ public class touchSwipe : MonoBehaviour {
 
     IEnumerator swipePageRight()
     {
-        leftSideObjects.SetActive(false);
-        settingsIcon.SetActive(false);
+        //leftSideObjects.SetActive(false);
+        //settingsIcon.SetActive(false);
+        foreach (GameObject left in leftsideObjects)
+        {
+            left.SetActive(false);
+        }
         anim.SetTrigger("previousPage");
         yield return new WaitForSeconds(animationTime);
-        exitIcon.SetActive(false);
-        rightSideObjects.SetActive(false);
+        foreach (GameObject right in rightsideObjects)
+        {
+            right.SetActive(false);
+        }
+        //exitIcon.SetActive(false);
+        //rightSideObjects.SetActive(false);
         yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PagePrev);
         yield return null;
