@@ -12,11 +12,13 @@ public class SwipeScript : MonoBehaviour {
     float timeToTurnPage = 1;
     Animator anim;
     float animationTime = 0.5f, animationTime2 = 1.2f;
-    public GameObject rightSideObjects, leftSideObjects, settingsIcon, exitIcon;
+    public GameObject[] leftsideObjects, rightsideObjects;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        leftsideObjects = GameObject.FindGameObjectsWithTag("leftside");
+        rightsideObjects = GameObject.FindGameObjectsWithTag("rightside");
     }
 
 
@@ -97,7 +99,6 @@ public class SwipeScript : MonoBehaviour {
         if(swipeRight == true)
         {
             StartCoroutine("swipePageRight");
-            //titles.SetActive(false);
             swipeRight = false;
         }
         else if(swipeLeft == true)
@@ -119,12 +120,16 @@ public class SwipeScript : MonoBehaviour {
    
     IEnumerator swipePageLeft()
     {
-        exitIcon.SetActive(false);
-        rightSideObjects.SetActive(false);
+        foreach (GameObject right in rightsideObjects)
+        {
+            right.SetActive(false);
+        }
         anim.SetTrigger("nextPage");
         yield return new WaitForSeconds(animationTime);
-        settingsIcon.SetActive(false);
-        leftSideObjects.SetActive(false);
+        foreach (GameObject left in leftsideObjects)
+        {
+            left.SetActive(false);
+        }
         yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PageNext);
         yield return null;
@@ -132,12 +137,16 @@ public class SwipeScript : MonoBehaviour {
 
     IEnumerator swipePageRight()
     {
-        leftSideObjects.SetActive(false);
-        settingsIcon.SetActive(false);
+        foreach (GameObject left in leftsideObjects)
+        {
+            left.SetActive(false);
+        }
         anim.SetTrigger("previousPage");
         yield return new WaitForSeconds(animationTime);
-        exitIcon.SetActive(false);
-        rightSideObjects.SetActive(false);
+        foreach (GameObject right in rightsideObjects)
+        {
+            right.SetActive(false);
+        }
         yield return new WaitForSeconds(animationTime2);
         SceneManager.LoadScene(PagePrev);
         yield return null;
