@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43100864, g: 0.23310554, b: 0.4899227, a: 1}
+  m_IndirectSpecularColor: {r: 0.43098438, g: 0.2331362, b: 0.49005592, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 508852348}
   m_Layer: 0
   m_Name: Right Page
-  m_TagString: Untagged
+  m_TagString: rightside
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -934,6 +934,10 @@ Prefab:
       propertyPath: m_Name
       value: Column 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b64d34bfa012b94585b9003916976aa, type: 3}
+      propertyPath: m_TagString
+      value: leftside
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b64d34bfa012b94585b9003916976aa, type: 3}
   m_IsPrefabAsset: 0
@@ -1093,7 +1097,7 @@ GameObject:
   - component: {fileID: 726535059}
   m_Layer: 0
   m_Name: Left Page
-  m_TagString: Untagged
+  m_TagString: leftside
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6577,7 +6581,7 @@ GameObject:
   - component: {fileID: 1404833850}
   m_Layer: 0
   m_Name: Mountains
-  m_TagString: Untagged
+  m_TagString: leftside
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6778,6 +6782,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1050762261039156, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
+      propertyPath: m_TagString
+      value: leftside
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
   m_IsPrefabAsset: 0
@@ -6844,6 +6852,10 @@ Prefab:
       propertyPath: m_Name
       value: Column 4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dadbec4f63d041245ab424d2f7b80cb2, type: 3}
+      propertyPath: m_TagString
+      value: leftside
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dadbec4f63d041245ab424d2f7b80cb2, type: 3}
   m_IsPrefabAsset: 0
@@ -6857,7 +6869,7 @@ GameObject:
   - component: {fileID: 1444897685}
   m_Layer: 0
   m_Name: Dessert
-  m_TagString: Untagged
+  m_TagString: leftside
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6920,7 +6932,7 @@ GameObject:
   - component: {fileID: 1455739315}
   m_Layer: 0
   m_Name: Polar
-  m_TagString: Untagged
+  m_TagString: rightside
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8252,7 +8264,7 @@ Prefab:
     - target: {fileID: 114879169975827806, guid: b2c93ade66b009e4fb696f13c66c22d4,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}

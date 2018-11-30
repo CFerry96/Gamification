@@ -13,7 +13,7 @@ public class LerpingCamera : MonoBehaviour
     public GameObject drawing;
     public GameObject yourArt;
     public string SceneToLoad;
-
+    bool fadeIn = false;
 
     // Use this for initialization
     void Awake()
@@ -38,7 +38,14 @@ public class LerpingCamera : MonoBehaviour
         transform.LookAt(target.transform.parent);
 
         transform.rotation = Quaternion.RotateTowards(this.transform.rotation, target.rotation, 90 * Time.deltaTime / blackoutTime);
-       
+
+        if (fadeIn == true)
+        {
+            var tempVariable = Black.color;
+            tempVariable.a += Time.deltaTime / 1f;
+            Black.color = tempVariable;
+        }
+
     }
 
     IEnumerator SceneChange()
@@ -47,15 +54,9 @@ public class LerpingCamera : MonoBehaviour
         drawing.SetActive(false);
         yourArt.SetActive(false);
         yield return new WaitForSeconds(3);
-        while (true)
-        {
-            var tempVariable = Black.color;
-            tempVariable.a += Time.deltaTime / 1f;
-            Black.color = tempVariable;
-
-            yield return new WaitForSeconds(3);
-            SceneManager.LoadScene(SceneToLoad);
-        }
+        fadeIn = true;
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(SceneToLoad);
     }
 
 }
