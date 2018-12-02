@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1b1d24cfa7467e547bf4969cd904f13a
+guid: 2c88ea069efd7814f972e783e3744505
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: RockL
+    4300000: TreeTrunk001
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.2
+    globalScale: 0.1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
