@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class audioRec : MonoBehaviour
 {
+    public GameObject recordingButtons;
     public float recordingTime;
     float maxRecordingTime = 60f;
     AudioClip myAudioClip;
     public bool recording;
+    public float fadeInTime;
+    float fadeInCount;
 
     void Start() {
         maxRecordingTime = recordingTime;
     }
 
     void Update() {
+        fadeInCount += Time.deltaTime;
         if (recording == true)
         {
             maxRecordingTime -= Time.deltaTime;
@@ -24,6 +28,11 @@ public class audioRec : MonoBehaviour
             Microphone.End(null);
             recording = false;
             maxRecordingTime = recordingTime;
+            AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
+        }
+        if(fadeInCount >= fadeInTime)
+        {
+            recordingButtons.SetActive(true);
         }
     }
     
@@ -31,38 +40,38 @@ public class audioRec : MonoBehaviour
     void OnGUI()
     {
         
-         GUI.Label(new Rect(500, 10, 100, 20), "Recording:" + maxRecordingTime);
+        GUI.Label(new Rect(500, 10, 100, 20), "Recording:" + maxRecordingTime);
         
-        if (GUI.Button(new Rect(10, 10, 60, 50), "Record"))
-        {
-            Debug.Log("recording");
-            RecordAudio();
-        }
-        //if (GUI.Button(new Rect(70, 10, 60, 50), "Stop recording")){
-        //    Microphone.End(null);
+        //if (GUI.Button(new Rect(10, 10, 60, 50), "Record"))
+        //{
+        //    Debug.Log("recording");
+        //    RecordAudio();
         //}
-        if (GUI.Button(new Rect(10, 70, 60, 50), "Save"))
-        {
-            //SavWav.Save("myfile", myAudioClip)"
+        ////if (GUI.Button(new Rect(70, 10, 60, 50), "Stop recording")){
+        ////    Microphone.End(null);
+        ////}
+        //if (GUI.Button(new Rect(10, 70, 60, 50), "Save"))
+        //{
+        //    //SavWav.Save("myfile", myAudioClip)"
 
-            //        audio.Play();
-            Microphone.End(null);
-            recording = false;
-            maxRecordingTime = recordingTime;
+        //    //        audio.Play();
+        //    Microphone.End(null);
+        //    recording = false;
+        //    maxRecordingTime = recordingTime;
 
-            AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
-        }
-        if (GUI.Button(new Rect(10,130, 60, 50), "Play"))
-        {
-            AudioSource audio = GetComponent<AudioSource>();
-            //audio.clip = myAudioClip;
-            //audio.Play();
-            AudioSerialisation.LoadAudioClipFromDisk(audio, "myfile");
-            audio.Play();
+        //    AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
+        //}
+        //if (GUI.Button(new Rect(10,130, 60, 50), "Play"))
+        //{
+        //    AudioSource audio = GetComponent<AudioSource>();
+        //    //audio.clip = myAudioClip;
+        //    //audio.Play();
+        //    AudioSerialisation.LoadAudioClipFromDisk(audio, "myfile");
+        //    audio.Play();
             
-        }
+        //}
     }
-    void RecordAudio()
+    public void RecordAudio()
     {
         if (!recording)
         {
@@ -76,7 +85,28 @@ public class audioRec : MonoBehaviour
         {
             Microphone.End(null);
             recording = false;
+            maxRecordingTime = recordingTime;
+
+            AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
         }
+    }
+
+    public void PlayAudio()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        //audio.clip = myAudioClip;
+        //audio.Play();
+        AudioSerialisation.LoadAudioClipFromDisk(audio, "myfile");
+        audio.Play();
+    }
+
+    public void SaveAudio()
+    {
+        Microphone.End(null);
+        recording = false;
+        maxRecordingTime = recordingTime;
+
+        AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
     }
     /* IEnumerator CountDown()
      {
