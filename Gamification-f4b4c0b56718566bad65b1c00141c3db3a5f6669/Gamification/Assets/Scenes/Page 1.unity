@@ -750,34 +750,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4415284295813696, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.2241608
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4415284295813696, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.2241614
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4415284295813696, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1.2241611
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 198243193882298456, guid: c6f7016761a5c5042b1aee27016bb05b,
         type: 2}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.6907593
+      value: 0.81401956
       objectReference: {fileID: 0}
     - target: {fileID: 198243193882298456, guid: c6f7016761a5c5042b1aee27016bb05b,
         type: 2}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.010679938
+      value: 0.49261305
       objectReference: {fileID: 0}
     - target: {fileID: 198243193882298456, guid: c6f7016761a5c5042b1aee27016bb05b,
         type: 2}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.754717
+      value: 0.8490566
       objectReference: {fileID: 0}
     - target: {fileID: 1050762261039156, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
       propertyPath: m_Name
       value: Particle System (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 198243193882298456, guid: c6f7016761a5c5042b1aee27016bb05b,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
@@ -2605,30 +2610,30 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4415284295813696, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.2241607
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4415284295813696, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.2241638
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4415284295813696, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1.2241637
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 198243193882298456, guid: c6f7016761a5c5042b1aee27016bb05b,
         type: 2}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.6907593
+      value: 0.84394443
       objectReference: {fileID: 0}
     - target: {fileID: 198243193882298456, guid: c6f7016761a5c5042b1aee27016bb05b,
         type: 2}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.010679938
+      value: 0.38065147
       objectReference: {fileID: 0}
     - target: {fileID: 198243193882298456, guid: c6f7016761a5c5042b1aee27016bb05b,
         type: 2}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.754717
+      value: 0.8867924
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f7016761a5c5042b1aee27016bb05b, type: 2}
