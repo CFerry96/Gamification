@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: b3f1cef56062311418df76bd64876ae4
+guid: 97751264532acb54da47c29f0055555b
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Arrow UI 1_0
+    21300000: Your Art UI Lightmask_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
-    sRGBTexture: 1
+    enableMipMap: 1
+    sRGBTexture: 0
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -17,9 +17,9 @@ TextureImporter:
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
-    convertToNormalMap: 0
+    convertToNormalMap: 1
     externalNormalMap: 0
-    heightScale: 0.25
+    heightScale: 0
     normalMapFilter: 0
   isReadable: 0
   streamingMipmaps: 0
@@ -35,8 +35,8 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: 1
-    wrapV: 1
+    wrapU: -1
+    wrapV: -1
     wrapW: -1
   nPOTScale: 0
   lightmap: 0
@@ -50,9 +50,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 1
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -118,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arrow UI 1_0
+      name: Your Art UI Lightmask_0
       rect:
         serializedVersion: 2
-        x: 208
-        y: 894
-        width: 1556
-        height: 856
+        x: 0
+        y: 835
+        width: 1920
+        height: 764
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,7 +132,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 565d3fcda723266478e6bee7ae595709
+      spriteID: bdf31267173053e48801111e18e3c918
       vertices: []
       indices: 
       edges: []
@@ -140,7 +140,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9b0452bfa1fb8654f8e5141a4e34e26f
+    spriteID: 17d2297f59ec20547a81475d2354056d
     vertices: []
     indices: 
     edges: []
