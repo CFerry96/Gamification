@@ -684,6 +684,7 @@ MonoBehaviour:
   KingdomName: Desert
   Spotlight: {fileID: 0}
   Spotlights: []
+  arrow: {fileID: 387499253}
 --- !u!1 &346861112
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &387499254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -830,14 +831,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 387499253}
-  m_LocalRotation: {x: 0.6191854, y: 0.08082985, z: 0.064294994, w: 0.7784229}
-  m_LocalPosition: {x: -9.361934, y: -1.07, z: 5.2}
+  m_LocalRotation: {x: -0.13648681, y: 0.6093402, z: -0.7810477, w: -0.006355098}
+  m_LocalPosition: {x: 6.6, y: 0.17, z: -2.72}
   m_LocalScale: {x: 0.25538, y: 0.25538, z: 0.25538}
   m_Children:
   - {fileID: 1768822306}
   m_Father: {fileID: 0}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 72.47401, y: 43.023003, z: 41.667004}
+  m_LocalEulerAnglesHint: {x: 72.47401, y: 43.023003, z: -148.70801}
 --- !u!1 &406273108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,6 +1347,7 @@ MonoBehaviour:
   KingdomName: Forest
   Spotlight: {fileID: 0}
   Spotlights: []
+  arrow: {fileID: 0}
 --- !u!1001 &560511833
 Prefab:
   m_ObjectHideFlags: 0
@@ -7978,6 +7980,7 @@ MonoBehaviour:
   KingdomName: Polar
   Spotlight: {fileID: 0}
   Spotlights: []
+  arrow: {fileID: 0}
 --- !u!65 &1390590872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8614,6 +8617,7 @@ MonoBehaviour:
   KingdomName: Polar
   Spotlight: {fileID: 0}
   Spotlights: []
+  arrow: {fileID: 0}
 --- !u!65 &1463149936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8810,6 +8814,7 @@ MonoBehaviour:
   KingdomName: Mountain
   Spotlight: {fileID: 0}
   Spotlights: []
+  arrow: {fileID: 0}
 --- !u!1 &1629369106
 GameObject:
   m_ObjectHideFlags: 0
@@ -9008,6 +9013,7 @@ MonoBehaviour:
   KingdomName: Forest
   Spotlight: {fileID: 0}
   Spotlights: []
+  arrow: {fileID: 0}
 --- !u!65 &1650157384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9598,6 +9604,7 @@ MonoBehaviour:
   KingdomName: Desert
   Spotlight: {fileID: 0}
   Spotlights: []
+  arrow: {fileID: 0}
 --- !u!65 &1789084077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10477,6 +10484,7 @@ MonoBehaviour:
   KingdomName: Mountain
   Spotlight: {fileID: 0}
   Spotlights: []
+  arrow: {fileID: 0}
 --- !u!65 &2038784616
 BoxCollider:
   m_ObjectHideFlags: 0

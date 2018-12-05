@@ -11,6 +11,7 @@ public class ChangeSceneforSwipe : MonoBehaviour {
     public string KingdomName;
     public GameObject Spotlight;
     public GameObject[] Spotlights;
+    public GameObject arrow;
 
 
 	// Use this for initialization
@@ -27,6 +28,7 @@ public class ChangeSceneforSwipe : MonoBehaviour {
     {
         if (Spotlights.Length == 0)
         {
+            arrow.SetActive(true);
             soundManager.soundBoy.StartCoroutine("fadeInLayers");
             for (int i = 0; i < Spotlights.Length; i++)
             {
