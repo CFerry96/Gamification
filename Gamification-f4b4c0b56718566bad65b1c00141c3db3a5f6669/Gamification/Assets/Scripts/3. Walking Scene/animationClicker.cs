@@ -5,6 +5,7 @@ using UnityEngine;
 public class animationClicker : MonoBehaviour {
 
     Animator anim;
+    bool click =false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,17 @@ public class animationClicker : MonoBehaviour {
 
     public void clicked()
     {
-        anim.SetTrigger("clicked");
+        Debug.Log("clicked");
+        if (click == false)
+        {
+            Debug.Log("actually clicked");
+            anim.SetBool("animPlay",true);
+            click = true;
+        }
+        else if (click)
+        {
+            anim.SetBool("animPlay",false);
+            click =false;
+        }
     }
 }
