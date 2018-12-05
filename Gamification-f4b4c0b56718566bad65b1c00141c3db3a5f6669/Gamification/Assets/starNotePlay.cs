@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class starNotePlay : MonoBehaviour {
     public AudioSource note1, note2, note3;
+    float temInt;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        temInt = Random.Range(0, 3);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -18,7 +19,7 @@ public class starNotePlay : MonoBehaviour {
     public void clicked()
     
     {
-        float temInt = Random.Range(0, 3);
+        
         if (temInt <= 1)
         {
             note1.Play();
