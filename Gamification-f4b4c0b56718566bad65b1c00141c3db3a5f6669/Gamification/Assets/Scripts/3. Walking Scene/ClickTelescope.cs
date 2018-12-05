@@ -16,6 +16,7 @@ public class ClickTelescope : MonoBehaviour {
     public Transform finalWaypoint;
     bool clicked = false;
     GameObject camera;
+    public GameObject particle;
     GyroControls gyroControls;
 
     private void Start()
@@ -35,10 +36,14 @@ public class ClickTelescope : MonoBehaviour {
 
     private void Update()
     {
-        if (clicked == true)
+        if (Vector3.Distance(playerTransform.position, this.transform.position) <= Vector3.Distance(finalWaypoint.position, this.transform.position) + 1)
+        {
+            particle.SetActive(true);
+        }
+            if (clicked == true)
         {
             playerTransform.position = Vector3.Lerp(playerTransform.position, target.position, Time.deltaTime * blackoutTime);
-
+            particle.SetActive(false);
             var tempVariable = Black.color;
             tempVariable.a += Time.deltaTime / 2.5f;
             Black.color = tempVariable;
