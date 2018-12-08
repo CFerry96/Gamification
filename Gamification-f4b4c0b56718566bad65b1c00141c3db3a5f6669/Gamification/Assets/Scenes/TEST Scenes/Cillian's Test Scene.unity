@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a995b8fefbfa5479383fbe53cafe4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotSpeed: 0
 --- !u!4 &967233461
 Transform:
   m_ObjectHideFlags: 0
@@ -166,6 +167,7 @@ GameObject:
   - component: {fileID: 1434753112}
   - component: {fileID: 1434753110}
   - component: {fileID: 1434753111}
+  - component: {fileID: 1434753113}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -274,6 +276,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26a995b8fefbfa5479383fbe53cafe4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeed: 0
+--- !u!114 &1434753113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1434753106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d1af7dc6322af4daea5b2c4a7b28f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1524980809

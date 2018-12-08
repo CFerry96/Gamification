@@ -9,6 +9,7 @@ public class GoToConstellation : MonoBehaviour {
     public float blackoutTime;
     bool clicked = false;
     GyroControls gyroControls;
+    PcCameraControlls pcCameraControlls;
     GameObject cameraPos;
 
 
@@ -17,6 +18,8 @@ public class GoToConstellation : MonoBehaviour {
         cameraPos = GameObject.Find("Main Camera");
 
         gyroControls = cameraPos.GetComponent<GyroControls>();
+        pcCameraControlls = cameraPos.GetComponent<PcCameraControlls>();
+
     }
 
 
@@ -34,6 +37,7 @@ public class GoToConstellation : MonoBehaviour {
             //buttons.SetActive(false);
             blackScreen.SetActive(true);
             gyroControls.enabled = false;
+            pcCameraControlls.enabled = false;
             cameraPos.transform.rotation = Quaternion.Slerp(cameraPos.transform.rotation, focus.transform.rotation, Time.deltaTime);
          
                  
