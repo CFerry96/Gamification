@@ -43,7 +43,7 @@ public class SwipeScript : MonoBehaviour {
 
         #region Mobile Inputs
 
-        if(Input.touches.Length > 0)
+        /*if(Input.touches.Length > 0)
         {
             if (Input.touches[0].phase == TouchPhase.Began)
             {
@@ -57,7 +57,7 @@ public class SwipeScript : MonoBehaviour {
                 Reset();
             }
         }
-
+        */
         #endregion
 
         //Calculate the distance 
