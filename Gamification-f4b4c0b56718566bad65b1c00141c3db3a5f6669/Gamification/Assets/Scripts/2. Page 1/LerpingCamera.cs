@@ -50,10 +50,10 @@ public class LerpingCamera : MonoBehaviour
 
     IEnumerator SceneChange()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         drawing.SetActive(false);
         yourArt.SetActive(false);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         fadeIn = true;
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneToLoad);
