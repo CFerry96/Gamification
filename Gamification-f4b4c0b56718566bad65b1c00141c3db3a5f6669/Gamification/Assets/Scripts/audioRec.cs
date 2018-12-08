@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class audioRec : MonoBehaviour
 {
@@ -8,12 +9,17 @@ public class audioRec : MonoBehaviour
     public float recordingTime;
     float maxRecordingTime = 60f;
     AudioClip myAudioClip;
-    public bool recording;
+    public bool recording, optionsOpen;
     public float fadeInTime;
     float fadeInCount;
+    public Text optionText;
+    public Image recordButton, playButton;
+    AudioSource audio;
+
 
     void Start() {
         maxRecordingTime = recordingTime;
+        audio = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -30,10 +36,19 @@ public class audioRec : MonoBehaviour
             maxRecordingTime = recordingTime;
             AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
         }
-        if(fadeInCount >= fadeInTime)
+
+        if (audio.isPlaying)
         {
-            recordingButtons.SetActive(true);
+            playButton.color = Color.green;
         }
+        else
+        {
+            playButton.color = Color.white;
+        }
+        //if(fadeInCount >= fadeInTime)
+        //{
+        //    recordingButtons.SetActive(true);
+        //}
     }
     
 
@@ -75,10 +90,10 @@ public class audioRec : MonoBehaviour
     {
         if (!recording)
         {
-            
             myAudioClip = Microphone.Start(null, false, 10, 44100);
             Debug.Log("recording for real");
             recording = true;
+            recordButton.color = Color.red;
             //StartCoroutine(CountDown());
         }
         else if (recording)
@@ -88,12 +103,13 @@ public class audioRec : MonoBehaviour
             maxRecordingTime = recordingTime;
 
             AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
+            recordButton.color = Color.white;
         }
     }
 
     public void PlayAudio()
     {
-        AudioSource audio = GetComponent<AudioSource>();
+        //AudioSource audio = GetComponent<AudioSource>(); //
         //audio.clip = myAudioClip;
         //audio.Play();
         AudioSerialisation.LoadAudioClipFromDisk(audio, "myfile");
@@ -107,6 +123,24 @@ public class audioRec : MonoBehaviour
         maxRecordingTime = recordingTime;
 
         AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
+    }
+
+    public void DisplayControls()
+    {
+        if (!optionsOpen)
+        {
+            recordingButtons.SetActive(true);
+            optionsOpen = true;
+            optionText.text = "close menu";
+            starNotePlay.interactable = false;
+        }
+        else if (optionsOpen)
+        {
+            optionsOpen = false;
+            recordingButtons.SetActive(false);
+            optionText.text = "record your journey";
+            starNotePlay.interactable = true;
+        }
     }
     /* IEnumerator CountDown()
      {

@@ -5,9 +5,11 @@ using UnityEngine;
 public class starNotePlay : MonoBehaviour {
     public AudioSource note1, note2, note3;
     float temInt;
+    public static bool interactable;
 
 	// Use this for initialization
 	void Start () {
+        interactable = true;
         temInt = Random.Range(0, 3);
     }
 	
@@ -19,21 +21,23 @@ public class starNotePlay : MonoBehaviour {
     public void clicked()
     
     {
-        
-        if (temInt <= 1)
+        if (interactable)
         {
-            note1.Play();
-            Debug.Log("note1");
-        }
-        else if (temInt <= 2)
-        {
-            note2.Play();
-            Debug.Log("note2");
-        }
-        else if (temInt <= 3)
-        {
-            note3.Play();
-            Debug.Log("note3");
+            if (temInt <= 1)
+            {
+                note1.Play();
+                Debug.Log("note1");
+            }
+            else if (temInt <= 2)
+            {
+                note2.Play();
+                Debug.Log("note2");
+            }
+            else if (temInt <= 3)
+            {
+                note3.Play();
+                Debug.Log("note3");
+            }
         }
     }
 }
