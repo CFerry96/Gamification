@@ -9573,6 +9573,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   settingsOn: 0
+--- !u!114 &1541436104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1541436099}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce03e81dd863784d9574ea0eccc72d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PagePrev: Kingdom Selection
+  PageNext: Page 2
+  leftsideObjects: []
+  rightsideObjects: []
 --- !u!4 &1624507675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4c63c74822531d9438833157504650ae,
