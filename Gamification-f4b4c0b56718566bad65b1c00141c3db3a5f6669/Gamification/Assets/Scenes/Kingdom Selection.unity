@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42791152, g: 0.23397133, b: 0.49010128, a: 1}
+  m_IndirectSpecularColor: {r: 0.43098438, g: 0.2331362, b: 0.49005592, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2306,11 +2306,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.22
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.02
+      value: -4.93
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2407,6 +2407,18 @@ Prefab:
     - target: {fileID: 100002, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
       propertyPath: m_Name
       value: BookFixed
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 14d008fa361a1e84281ec7be16f42043, type: 2}
+    - target: {fileID: 9500000, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
@@ -9528,6 +9540,39 @@ MonoBehaviour:
   Spotlight: {fileID: 0}
   Spotlights: []
   arrow: {fileID: 0}
+--- !u!1 &1541436099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: acd75768d5512d2459bb19c2c5de5e4c,
+    type: 3}
+  m_PrefabInternal: {fileID: 731659784}
+--- !u!114 &1541436100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1541436099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5516f9bf3052741489c5e15fdd8c1548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PagePrev: Kingdom Selection
+  PageNext: Page 2
+  leftsideObjects: []
+  rightsideObjects: []
+--- !u!114 &1541436101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1541436099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64214460d22e4545b8654217aede642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  settingsOn: 0
 --- !u!4 &1624507675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4c63c74822531d9438833157504650ae,
@@ -10858,7 +10903,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.8119633
+      value: 34.99
       objectReference: {fileID: 0}
     - target: {fileID: 4576358741589794, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
       propertyPath: m_LocalPosition.y
