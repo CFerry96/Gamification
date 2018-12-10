@@ -16,6 +16,7 @@ public class ChangeSceneforSwipe : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //arrow = GameObject.Find("Arrow UI_0");
         Book = GameObject.Find("New Book");
         Spotlight = GameObject.Find(KingdomName + " Spot Light");
         Spotlight.SetActive(false);
