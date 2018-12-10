@@ -36,6 +36,7 @@ public class ChangeSceneforSwipe : MonoBehaviour {
                 Spotlights[i].SetActive(false);
             }
             Spotlight.SetActive(true);
+            SwipeScript.canSwipe = true;
             touchswipe.PageNext = ScenetoLoad;
             swipeScript.PageNext = ScenetoLoad;
         }

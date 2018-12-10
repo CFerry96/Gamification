@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43098438, g: 0.2331362, b: 0.49005592, a: 1}
+  m_IndirectSpecularColor: {r: 0.43100864, g: 0.23310554, b: 0.4899227, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1142,12 +1142,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 387499253}
   m_LocalRotation: {x: -0.13648681, y: 0.6093402, z: -0.7810477, w: -0.006355098}
-  m_LocalPosition: {x: 6.6, y: 0.17, z: -2.72}
-  m_LocalScale: {x: 0.25538, y: 0.25538, z: 0.25538}
+  m_LocalPosition: {x: 11.460001, y: 2.5500002, z: -2.47}
+  m_LocalScale: {x: 0.25538006, y: 0.25537997, z: 0.25538}
   m_Children:
   - {fileID: 1768822306}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 508852348}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 72.47401, y: 43.023003, z: -148.70801}
 --- !u!1 &406273108
 GameObject:
@@ -1470,6 +1470,7 @@ Transform:
   m_Children:
   - {fileID: 547859966}
   - {fileID: 1390590869}
+  - {fileID: 387499255}
   m_Father: {fileID: 1013244984}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2406,7 +2407,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
       propertyPath: m_Name
-      value: BookFixed
+      value: New Book
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
       propertyPath: m_Controller

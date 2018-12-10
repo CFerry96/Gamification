@@ -13,9 +13,11 @@ public class SwipeScript : MonoBehaviour {
     Animator anim;
     float animationTime = 0.5f, animationTime2 = 1.2f;
     public GameObject[] leftsideObjects, rightsideObjects;
+    public static bool canSwipe;
 
     private void Start()
     {
+        canSwipe = false;
         anim = GetComponent<Animator>();
         leftsideObjects = GameObject.FindGameObjectsWithTag("leftside");
         rightsideObjects = GameObject.FindGameObjectsWithTag("rightside");
@@ -103,7 +105,10 @@ public class SwipeScript : MonoBehaviour {
         }
         else if(swipeLeft == true)
         {
-            StartCoroutine("swipePageLeft");
+            if (canSwipe)
+            {
+                StartCoroutine("swipePageLeft");
+            }
         }
 
     }

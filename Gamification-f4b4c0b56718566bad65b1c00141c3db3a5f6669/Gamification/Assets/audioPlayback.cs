@@ -11,7 +11,7 @@ public class audioPlayback : MonoBehaviour {
     // Use this for initialization
     void Start () {
         audio = GetComponent<AudioSource>();
-        StartCoroutine(CheckForButton());
+        StartCoroutine(CheckForButton()); // cannot check for this in start as it takes a while for the pesistent data check to load the file.
         
 	}
 	
