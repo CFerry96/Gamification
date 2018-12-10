@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42791152, g: 0.23397133, b: 0.49010128, a: 1}
+  m_IndirectSpecularColor: {r: 0.43098438, g: 0.2331362, b: 0.49005592, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2406,7 +2406,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
       propertyPath: m_Name
-      value: New Book
+      value: BookFixed
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
       propertyPath: m_Controller
@@ -2438,7 +2438,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 1.4033418e-14
+      value: 9.991794e-15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
