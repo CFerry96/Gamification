@@ -11,7 +11,7 @@ public class audioPlayback : MonoBehaviour {
     // Use this for initialization
     void Start () {
         audio = GetComponent<AudioSource>();
-        StartCoroutine(CheckForButton()); // cannot check for this in start as it takes a while for the pesistent data check to load the file.
+        //StartCoroutine(CheckForButton()); // cannot check for this in start as it takes a while for the pesistent data check to load the file.
         
 	}
 	
@@ -19,22 +19,23 @@ public class audioPlayback : MonoBehaviour {
 	void Update () {
         if (audio.isPlaying)
         {
-            playButton.color = Color.green;
+           // playButton.color = Color.green;
         }
         else
         {
-            playButton.color = Color.white;
+            //playButton.color = Color.white;
         }
         
     }
 
-    public void PlayAudio()
+    public void clicked()
     {
         //AudioSource audio = GetComponent<AudioSource>(); //
         //audio.clip = myAudioClip;
         //audio.Play();
         AudioSerialisation.LoadAudioClipFromDisk(audio, "myfile");
         audio.Play();
+        Debug.Log("playing file");
     }
 
     IEnumerator CheckForButton()
