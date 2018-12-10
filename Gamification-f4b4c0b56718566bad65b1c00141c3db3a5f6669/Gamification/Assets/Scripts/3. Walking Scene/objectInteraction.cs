@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class objectInteraction : MonoBehaviour {
-    public Camera cam;
+    Camera cam;
     
 
     // Use this for initialization
