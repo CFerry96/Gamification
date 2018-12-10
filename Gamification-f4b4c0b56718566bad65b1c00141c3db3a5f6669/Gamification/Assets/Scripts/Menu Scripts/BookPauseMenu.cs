@@ -35,7 +35,7 @@ public class BookPauseMenu : MonoBehaviour {
         exitFromPage = GameObject.Find("Exit Icon").GetComponent<Button>();
 
         //continueButton = canvasAssigner.Continue;
-        settingsButton = canvasAssigner.Settings;
+        //settingsButton = canvasAssigner.Settings;
         //exitButton = canvasAssigner.Exit;
         exitButton1 = canvasAssigner.Exit1;
 
@@ -49,7 +49,7 @@ public class BookPauseMenu : MonoBehaviour {
     void Update()
     {
         //continueButton.onClick.AddListener(Continue);
-        settingsButton.onClick.AddListener(Settings);
+        //settingsButton.onClick.AddListener(Settings);
         //exitButton.onClick.AddListener(Exit);
         exitButton1.onClick.AddListener(Exit);
         gearButton.onClick.AddListener(Settings);

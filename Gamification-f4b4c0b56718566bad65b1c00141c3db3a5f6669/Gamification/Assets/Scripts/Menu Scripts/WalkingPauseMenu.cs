@@ -9,15 +9,15 @@ public class WalkingPauseMenu : MonoBehaviour {
     public bool settingsOn;
     
     //public GameObject MovementButtons;
-    GameObject Menu;
+    //GameObject Menu;
     GameObject SettingsMenu;
 
     CanvasAssigner canvasAssigner;
     GameObject Canvas;
 
-    Button continueButton;
-    Button settingsButton;
-    Button exitButton;
+    //Button continueButton;
+    //Button settingsButton;
+    //Button exitButton;
     Button exitButton1;
 
     // Use this for initialization
@@ -25,34 +25,34 @@ public class WalkingPauseMenu : MonoBehaviour {
         Canvas = GameObject.Find("Canvas");
         canvasAssigner = Canvas.GetComponent<CanvasAssigner>();
 
-        continueButton = canvasAssigner.Continue;
-        settingsButton = canvasAssigner.Settings;
-        exitButton = canvasAssigner.Exit;
+        //continueButton = canvasAssigner.Continue;
+        //settingsButton = canvasAssigner.Settings;
+        //exitButton = canvasAssigner.Exit;
         exitButton1 = canvasAssigner.Exit1;
 
-        Menu = canvasAssigner.PauseMenu;
+        //Menu = canvasAssigner.PauseMenu;
         SettingsMenu = canvasAssigner.SettingsMenu;
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        continueButton.onClick.AddListener(Continue);
-        settingsButton.onClick.AddListener(Settings);
-        exitButton.onClick.AddListener(Exit);
+        //continueButton.onClick.AddListener(Continue);
+        //settingsButton.onClick.AddListener(Settings);
+        //exitButton.onClick.AddListener(Exit);
         exitButton1.onClick.AddListener(Exit);
 
 
         if (Pause == true)
         {
-            Menu.SetActive(true);
+            //Menu.SetActive(true);
             //MovementButtons.SetActive(false);
             Time.timeScale = 0f;
         }
 
         if (Pause == false)
         {
-            Menu.SetActive(false);
+            //Menu.SetActive(false);
             if (settingsOn == false)
             {
                 Time.timeScale = 1f;
