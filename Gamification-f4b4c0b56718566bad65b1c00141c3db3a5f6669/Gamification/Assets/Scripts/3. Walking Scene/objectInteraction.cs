@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class objectInteraction : MonoBehaviour {
     public Camera cam;
-    
+    public bool clickedOnce;
 
     // Use this for initialization
     void Start() {
@@ -22,6 +22,7 @@ public class objectInteraction : MonoBehaviour {
                 {
                     //print("I'm looking at " + hit.transform.name);
                     hit.transform.gameObject.SendMessage("clicked");
+                    clickedOnce = true;
                     //Destroy(hit.transform.gameObject);
                 }
                 else
