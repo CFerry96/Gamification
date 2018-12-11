@@ -29,17 +29,17 @@ public class persistence : MonoBehaviour
             Destroy(gameObject);
         }
 
-
-
-    }
-
-    private void Start()
-    {
         if (resetData)
         {
             Reset();
         }
         Load();
+
+    }
+
+    private void Start()
+    {
+        
     }
 
     // Update is called once per frame
