@@ -51,7 +51,7 @@ public class BookPauseMenu : MonoBehaviour {
         //continueButton.onClick.AddListener(Continue);
         //settingsButton.onClick.AddListener(Settings);
         //exitButton.onClick.AddListener(Exit);
-        exitButton1.onClick.AddListener(Exit);
+        //exitButton1.onClick.AddListener(Exit);
         gearButton.onClick.AddListener(Settings);
         exitFromPage.onClick.AddListener(Gtfo);
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44709963, g: 0.49700356, b: 0.57511026, a: 1}
+  m_IndirectSpecularColor: {r: 0.44709975, g: 0.49700356, b: 0.5751106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -454,6 +454,10 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -51.4
       objectReference: {fileID: 0}
+    - target: {fileID: 1273190873926330, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c93ade66b009e4fb696f13c66c22d4, type: 2}
   m_IsPrefabAsset: 0
@@ -760,6 +764,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 14d008fa361a1e84281ec7be16f42043, type: 2}
+    - target: {fileID: 100002, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
+      propertyPath: m_Name
+      value: New Book
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd75768d5512d2459bb19c2c5de5e4c, type: 3}
   m_IsPrefabAsset: 0
@@ -825,5 +833,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64214460d22e4545b8654217aede642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 0
   settingsOn: 0

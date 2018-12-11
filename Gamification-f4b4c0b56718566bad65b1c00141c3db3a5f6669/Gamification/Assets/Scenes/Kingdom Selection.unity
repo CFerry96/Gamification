@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43100864, g: 0.23310554, b: 0.4899227, a: 1}
+  m_IndirectSpecularColor: {r: 0.42791152, g: 0.23397133, b: 0.49010128, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1958,8 +1958,8 @@ GameObject:
   m_Component:
   - component: {fileID: 547859966}
   - component: {fileID: 547859967}
-  - component: {fileID: 547859969}
   - component: {fileID: 547859968}
+  - component: {fileID: 547859969}
   m_Layer: 0
   m_Name: 'Forest_2 '
   m_TagString: Untagged
@@ -2047,10 +2047,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 547859965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38460f30c1577cb46aa3fb00d38d225c, type: 3}
+  m_Script: {fileID: 11500000, guid: 58adba06d38c4174b966d86c77ddb974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScenetoLoad: Page 2
   KingdomName: Forest
   Spotlight: {fileID: 0}
   Spotlights: []
@@ -9214,8 +9213,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1390590869}
   - component: {fileID: 1390590870}
-  - component: {fileID: 1390590871}
   - component: {fileID: 1390590872}
+  - component: {fileID: 1390590871}
   m_Layer: 0
   m_Name: 'Polar_2 '
   m_TagString: Untagged
@@ -9291,10 +9290,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1390590868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38460f30c1577cb46aa3fb00d38d225c, type: 3}
+  m_Script: {fileID: 11500000, guid: 58adba06d38c4174b966d86c77ddb974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScenetoLoad: Page 2
   KingdomName: Polar
   Spotlight: {fileID: 0}
   Spotlights: []
@@ -10026,8 +10024,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1526079109}
   - component: {fileID: 1526079110}
-  - component: {fileID: 1526079112}
   - component: {fileID: 1526079111}
+  - component: {fileID: 1526079112}
   m_Layer: 0
   m_Name: 'Mountain_2 '
   m_TagString: Untagged
@@ -10115,10 +10113,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1526079108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38460f30c1577cb46aa3fb00d38d225c, type: 3}
+  m_Script: {fileID: 11500000, guid: 58adba06d38c4174b966d86c77ddb974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScenetoLoad: Page 2
   KingdomName: Mountain
   Spotlight: {fileID: 0}
   Spotlights: []

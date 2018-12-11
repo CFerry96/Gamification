@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeSceneforSwipe : MonoBehaviour {
+public class SpotlightActivate : MonoBehaviour {
 
-    public string ScenetoLoad;
-    SwipeScript swipeScript;
-    GameObject Book;
     public string KingdomName;
+    GameObject Book;
+    SwipeScript swipeScript;
     public GameObject Spotlight;
     public GameObject[] Spotlights;
     public GameObject arrow;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         Book = GameObject.Find("New Book");
         Spotlight = GameObject.Find(KingdomName + " Spot Light");
         Spotlight.SetActive(false);
@@ -24,17 +24,16 @@ public class ChangeSceneforSwipe : MonoBehaviour {
     // Update is called once per frame
     private void OnMouseDown()
     {
-        arrow.SetActive(true);
-        SwipeScript.canSwipe = true;
+        SwipeScript.canSwipe = false;
+        arrow.SetActive(false);
         if (Spotlights.Length == 0)
-        {
+        { 
             soundManager.soundBoy.StartCoroutine("fadeInLayers");
             for (int i = 0; i < Spotlights.Length; i++)
             {
                 Spotlights[i].SetActive(false);
             }
             Spotlight.SetActive(true);
-            swipeScript.PageNext = ScenetoLoad;
         }
         else if (Spotlights.Length > 0)
         {
@@ -45,9 +44,9 @@ public class ChangeSceneforSwipe : MonoBehaviour {
                     Spotlights[i].SetActive(false);
                 }
                 Spotlight.SetActive(true);
-                swipeScript.PageNext = ScenetoLoad;
             }
-            else {
+            else
+            {
 
             }
         }
