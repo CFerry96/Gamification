@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class starNotePlay : MonoBehaviour {
     public AudioSource note1, note2, note3;
-    float temInt;
+    int temInt;
     public static bool interactable;
 
 	// Use this for initialization
@@ -23,17 +23,17 @@ public class starNotePlay : MonoBehaviour {
     {
         if (interactable)
         {
-            if (temInt <= 1)
+            if (temInt == 0)
             {
                 note1.Play();
                 Debug.Log("note1");
             }
-            else if (temInt <= 2)
+            else if (temInt == 1)
             {
                 note2.Play();
                 Debug.Log("note2");
             }
-            else if (temInt <= 3)
+            else if (temInt == 2)
             {
                 note3.Play();
                 Debug.Log("note3");
