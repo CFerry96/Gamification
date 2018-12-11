@@ -5,15 +5,29 @@ using UnityEngine.UI;
 
 public class audioPlayback : MonoBehaviour {
     AudioSource audio;
-    public Image playButton;
-    public GameObject buttonToDisplay;
+    // public Image playButton;
+    public Renderer buttonToDisplay, YourArtText;
+
 
     // Use this for initialization
     void Start () {
+        buttonToDisplay = GetComponent<Renderer>();
         audio = GetComponent<AudioSource>();
-        //StartCoroutine(CheckForButton()); // cannot check for this in start as it takes a while for the pesistent data check to load the file.
-        
-	}
+        //StartCoroutine(CheckForButton()); // changing data persistent script to load on awake over start fixed bugs requiring coroutine.
+        if (persistence.control.activated)
+        {
+            buttonToDisplay.enabled = true;
+            //PlayRecordingText.enabled = true;
+            YourArtText.enabled = false;
+            Debug.Log("button on");
+        }
+        else
+        {
+            buttonToDisplay.enabled = false;
+           // PlayRecordingText.enabled = false;
+            YourArtText.enabled = true;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -44,7 +58,7 @@ public class audioPlayback : MonoBehaviour {
         {
             if (persistence.control.activated)
             {
-                buttonToDisplay.SetActive(true);
+                //buttonToDisplay.SetActive(true);
                 Debug.Log("button on");
             }
             yield return new WaitForSeconds(1);
