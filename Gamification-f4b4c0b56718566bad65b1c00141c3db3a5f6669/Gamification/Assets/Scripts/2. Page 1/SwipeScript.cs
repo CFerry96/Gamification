@@ -14,9 +14,11 @@ public class SwipeScript : MonoBehaviour {
     float animationTime = 0.5f, animationTime2 = 1.2f;
     public GameObject[] leftsideObjects, rightsideObjects;
     public static bool canSwipe;
+    AudioSource pageSound;
 
     private void Start()
     {
+        pageSound = GetComponent<AudioSource>();
         canSwipe = false;
         anim = GetComponent<Animator>();
         leftsideObjects = GameObject.FindGameObjectsWithTag("leftside");
@@ -130,6 +132,7 @@ public class SwipeScript : MonoBehaviour {
             right.SetActive(false);
         }
         anim.SetTrigger("nextPage");
+        pageSound.Play();
         yield return new WaitForSeconds(animationTime);
         foreach (GameObject left in leftsideObjects)
         {
@@ -147,6 +150,7 @@ public class SwipeScript : MonoBehaviour {
             left.SetActive(false);
         }
         anim.SetTrigger("previousPage");
+        pageSound.Play();
         yield return new WaitForSeconds(animationTime);
         foreach (GameObject right in rightsideObjects)
         {
