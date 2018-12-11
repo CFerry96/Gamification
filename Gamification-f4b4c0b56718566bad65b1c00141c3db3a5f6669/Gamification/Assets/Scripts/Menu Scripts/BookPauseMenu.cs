@@ -42,6 +42,10 @@ public class BookPauseMenu : MonoBehaviour {
         {
             exitButton.SetActive(true);
         }
+        if (settingsOn == true)
+        {
+            exitButton.SetActive(false);
+        }
         settingsOn = !settingsOn;
     }
 
