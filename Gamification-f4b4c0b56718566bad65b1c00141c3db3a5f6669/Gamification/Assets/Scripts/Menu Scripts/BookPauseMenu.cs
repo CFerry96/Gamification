@@ -7,16 +7,7 @@ using UnityEngine.UI;
 public class BookPauseMenu : MonoBehaviour {
 
     public bool settingsOn;
-    public GameObject SettingsMenu;
-
-    public Button gearButton;
-    Button exitFromPage;
-
-    // Use this for initialization
-    void Start()
-    {
-        gearButton = GameObject.Find("Settings Icon").GetComponent<Button>();
-    }
+    public GameObject SettingsMenu, exitButton;
 
     // Update is called once per frame
     void Update()
@@ -47,6 +38,10 @@ public class BookPauseMenu : MonoBehaviour {
 
     public void Settings()
     {
+        if (settingsOn == false)
+        {
+            exitButton.SetActive(true);
+        }
         settingsOn = !settingsOn;
     }
 
@@ -55,6 +50,7 @@ public class BookPauseMenu : MonoBehaviour {
         if (settingsOn == true)
         {
             settingsOn = false;
+            exitButton.SetActive(false);
         }
     }
 
