@@ -28,7 +28,7 @@ public class WalkingPauseMenu : MonoBehaviour {
         //continueButton = canvasAssigner.Continue;
         //settingsButton = canvasAssigner.Settings;
         //exitButton = canvasAssigner.Exit;
-        exitButton1 = canvasAssigner.Exit1;
+        //exitButton1 = canvasAssigner.Exit1;
 
         //Menu = canvasAssigner.PauseMenu;
         SettingsMenu = canvasAssigner.SettingsMenu;
