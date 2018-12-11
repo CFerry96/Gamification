@@ -6,9 +6,11 @@ public class animationClicker : MonoBehaviour {
 
     Animator anim;
     bool click =false;
+    AudioSource soundEffect;
 
 	// Use this for initialization
 	void Start () {
+        soundEffect = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
 	}
 	
@@ -19,6 +21,10 @@ public class animationClicker : MonoBehaviour {
 
     public void clicked()
     {
+        if(soundEffect!= null)
+        {
+            soundEffect.Play();
+        }
         Debug.Log("clicked");
         if (click == false)
         {
