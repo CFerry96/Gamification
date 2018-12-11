@@ -13,7 +13,7 @@ public class drawingScript : MonoBehaviour
     private bool alreadyClicked = false;
     private bool endingTriggered = false;
     public ParticleSystem ps;
-    //public AudioSource note1, note2, note3;
+    public AudioSource note1, note2, note3;
 
     // Use this for initialization
     void Start()
@@ -82,30 +82,30 @@ public class drawingScript : MonoBehaviour
             boxVisual.enabled = true;
             ps.Play();
             lr.positionCount++;
-            //if (lr.positionCount ==1)
-            //{
-            //    soundManager.soundBoy.note1.Play();
-            //}
-            //if (lr.positionCount == 2)
-            //{
-            //    soundManager.soundBoy.note2.Play();
-            //}
-            //if (lr.positionCount == 3)
-            //{
-            //    soundManager.soundBoy.note3.Play();
-            //}
-            //if (lr.positionCount == 4)
-            //{
-            //    soundManager.soundBoy.note1.Play();
-            //}
-            //if (lr.positionCount == 5)
-            //{
-            //    soundManager.soundBoy.note2.Play();
-            //}
-            //if (lr.positionCount == 6)
-            //{
-            //    soundManager.soundBoy.note3.Play();
-            //}
+            if (lr.positionCount == 1)
+            {
+                soundManager.soundBoy.note1.Play();
+            }
+            if (lr.positionCount == 2)
+            {
+                soundManager.soundBoy.note2.Play();
+            }
+            if (lr.positionCount == 3)
+            {
+                soundManager.soundBoy.note3.Play();
+            }
+            if (lr.positionCount == 4)
+            {
+                soundManager.soundBoy.note1.Play();
+            }
+            if (lr.positionCount == 5)
+            {
+                soundManager.soundBoy.note2.Play();
+            }
+            if (lr.positionCount == 6)
+            {
+                soundManager.soundBoy.note3.Play();
+            }
             lr.SetPosition(clickNumber, transform.position);
             persistence.control.positionArray[clickNumber] = transform.position;
             Debug.Log(persistence.control.positionArray[clickNumber]);
