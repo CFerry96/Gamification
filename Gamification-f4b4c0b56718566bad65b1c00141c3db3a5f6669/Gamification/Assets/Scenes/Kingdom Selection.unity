@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42791152, g: 0.23397133, b: 0.49010128, a: 1}
+  m_IndirectSpecularColor: {r: 0.43100864, g: 0.23310554, b: 0.4899227, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11717,7 +11717,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -11812,7 +11812,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -11913,6 +11913,11 @@ MonoBehaviour:
   note3: {fileID: 0}
   fadeInTime: 0
   fadeOutTime: 0
+  musicVolume: 0
+  soundEffectsVolume: 0
+  musicSlider: {fileID: 1889514869}
+  effectsSlider: {fileID: 1716539497}
+  completedTrack: 0
 --- !u!1 &1716539495
 GameObject:
   m_ObjectHideFlags: 0
@@ -11992,7 +11997,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
