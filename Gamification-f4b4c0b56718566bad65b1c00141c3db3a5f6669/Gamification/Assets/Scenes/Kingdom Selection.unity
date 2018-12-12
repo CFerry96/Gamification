@@ -127,6 +127,8 @@ GameObject:
   m_Component:
   - component: {fileID: 50567864}
   - component: {fileID: 50567865}
+  - component: {fileID: 50567867}
+  - component: {fileID: 50567866}
   m_Layer: 0
   m_Name: Create Imagine Collaborate UI_1
   m_TagString: Untagged
@@ -193,6 +195,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &50567866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 50567863}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.31, y: 1.63, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &50567867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 50567863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7833ae692f119214e8aa672a392ec020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1297884343}
+  book: {fileID: 513174144}
 --- !u!1001 &54058620
 Prefab:
   m_ObjectHideFlags: 0
@@ -2357,6 +2384,34 @@ Transform:
   m_Father: {fileID: 1013244984}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &513174144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513174145}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &513174145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 513174144}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: -0.57468116, y: 17.386475, z: -2.205614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!1 &528685757
 GameObject:
   m_ObjectHideFlags: 0
@@ -11127,8 +11182,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1471619890}
   - component: {fileID: 1471619893}
-  - component: {fileID: 1471619892}
-  - component: {fileID: 1471619891}
   m_Layer: 0
   m_Name: Create Imagine Collaborate UI_0
   m_TagString: Untagged
@@ -11149,31 +11202,6 @@ Transform:
   m_Father: {fileID: 1186190673}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1471619891
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1471619889}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8.91, y: 1.78, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1471619892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1471619889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7833ae692f119214e8aa672a392ec020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1297884343}
-  book: {fileID: 1541436099}
 --- !u!212 &1471619893
 SpriteRenderer:
   m_ObjectHideFlags: 0
