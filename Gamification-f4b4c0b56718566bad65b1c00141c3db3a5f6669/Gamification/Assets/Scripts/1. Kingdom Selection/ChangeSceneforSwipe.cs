@@ -6,6 +6,7 @@ public class ChangeSceneforSwipe : MonoBehaviour {
 
     public string ScenetoLoad;
     SwipeScript swipeScript;
+    touchSwipe swipeScript2;
     GameObject Book;
     public string KingdomName;
     public GameObject Spotlight;
@@ -19,6 +20,7 @@ public class ChangeSceneforSwipe : MonoBehaviour {
         Spotlight = GameObject.Find(KingdomName + " Spot Light");
         Spotlight.SetActive(false);
         swipeScript = Book.GetComponent<SwipeScript>();
+        swipeScript2 = Book.GetComponent<touchSwipe>();
     }
 
     // Update is called once per frame
@@ -36,6 +38,8 @@ public class ChangeSceneforSwipe : MonoBehaviour {
             }
             Spotlight.SetActive(true);
             swipeScript.PageNext = ScenetoLoad;
+            swipeScript2.PageNext = ScenetoLoad;
+            
         }
         else if (Spotlights.Length > 0)
         {
@@ -47,6 +51,7 @@ public class ChangeSceneforSwipe : MonoBehaviour {
                 }
                 Spotlight.SetActive(true);
                 swipeScript.PageNext = ScenetoLoad;
+                swipeScript2.PageNext = ScenetoLoad;
             }
             else {
 
