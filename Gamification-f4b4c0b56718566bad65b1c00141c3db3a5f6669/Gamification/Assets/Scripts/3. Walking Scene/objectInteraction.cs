@@ -5,9 +5,11 @@ using UnityEngine;
 public class objectInteraction : MonoBehaviour {
     public Camera cam;
     public bool clickedOnce;
+    
 
     // Use this for initialization
     void Start() {
+        
         cam = GetComponent<Camera>();
     }
 
@@ -20,6 +22,7 @@ public class objectInteraction : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, 1000))
                 if (hit.transform.tag == "Interactable")
                 {
+                   
                     //print("I'm looking at " + hit.transform.name);
                     hit.transform.gameObject.SendMessage("clicked");
                     clickedOnce = true;
