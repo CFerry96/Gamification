@@ -13,7 +13,7 @@ public class Create : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        cam.transform.rotation = Quaternion.Slerp(transform.position,book.transform.position, Time.deltaTime * 5);
+        cam.transform.rotation = Quaternion.Slerp(this.transform.rotation,book.transform.rotation, Time.deltaTime);
     }
             
     }
