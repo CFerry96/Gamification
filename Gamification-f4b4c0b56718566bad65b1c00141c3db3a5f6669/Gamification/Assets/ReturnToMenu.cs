@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ReturnToMenu : MonoBehaviour {
 
-    public Text button;
+    //public Text button;
 
 	// Use this for initialization
 	void Start () {
@@ -16,14 +16,13 @@ public class ReturnToMenu : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if (button)
-            {
-                SceneManager.LoadScene("Page 1");
-            }
-        }
+      
 
+    }
+
+    public void backToMenu()
+    {
+        SceneManager.LoadScene("Page 1");
     }
     
 }

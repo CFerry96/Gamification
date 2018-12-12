@@ -35,8 +35,8 @@ public class soundManager : MonoBehaviour {
 
     private void Start()
     {
-        musicSlider.value = sliderPersistence.musicSlider;
-        effectsSlider.value = sliderPersistence.effectsSlider;
+        //musicSlider.value = sliderPersistence.musicSlider;
+        //effectsSlider.value = sliderPersistence.effectsSlider;
         completedTrack = false;
         musicSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
         effectsSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
@@ -68,8 +68,8 @@ public class soundManager : MonoBehaviour {
         note2.volume = effectsSlider.value;
         note3.volume = effectsSlider.value;
 
-        sliderPersistence.musicSlider = musicSlider.value;
-        sliderPersistence.effectsSlider = effectsSlider.value;
+        //sliderPersistence.musicSlider = musicSlider.value;
+        //sliderPersistence.effectsSlider = effectsSlider.value;
     }
     IEnumerator fadeInLayers()
     {

@@ -109,6 +109,15 @@ public class audioRec : MonoBehaviour
 
     public void PlayAudio()
     {
+         if (recording)
+        {
+            Microphone.End(null);
+            recording = false;
+            maxRecordingTime = recordingTime;
+
+            AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
+            recordButton.color = Color.white;
+        }
         //AudioSource audio = GetComponent<AudioSource>(); //
         //audio.clip = myAudioClip;
         //audio.Play();
@@ -125,23 +134,23 @@ public class audioRec : MonoBehaviour
         AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
     }
 
-    public void DisplayControls()
-    {
-        if (!optionsOpen)
-        {
-            recordingButtons.SetActive(true);
-            optionsOpen = true;
-            optionText.text = "close menu";
-            starNotePlay.interactable = false;
-        }
-        else if (optionsOpen)
-        {
-            optionsOpen = false;
-            recordingButtons.SetActive(false);
-            optionText.text = "record your journey";
-            starNotePlay.interactable = true;
-        }
-    }
+    //public void DisplayControls()
+    //{
+    //    if (!optionsOpen)
+    //    {
+    //        recordingButtons.SetActive(true);
+    //        optionsOpen = true;
+    //        optionText.text = "close menu";
+    //        starNotePlay.interactable = false;
+    //    }
+    //    else if (optionsOpen)
+    //    {
+    //        optionsOpen = false;
+    //        recordingButtons.SetActive(false);
+    //        optionText.text = "record your journey";
+    //        starNotePlay.interactable = true;
+    //    }
+    //}
     /* IEnumerator CountDown()
      {
 
