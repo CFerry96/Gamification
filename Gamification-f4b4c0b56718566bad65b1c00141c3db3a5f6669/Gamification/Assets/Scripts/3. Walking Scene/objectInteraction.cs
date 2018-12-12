@@ -22,7 +22,10 @@ public class objectInteraction : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, 1000))
                 if (hit.transform.tag == "Interactable")
                 {
-                    clickSound.Play();
+                    if (clickSound != null)
+                    {
+                        clickSound.Play();
+                    }
                     //print("I'm looking at " + hit.transform.name);
                     hit.transform.gameObject.SendMessage("clicked");
                     clickedOnce = true;
