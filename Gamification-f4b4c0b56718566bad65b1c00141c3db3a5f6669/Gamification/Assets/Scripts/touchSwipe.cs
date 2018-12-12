@@ -19,6 +19,7 @@ public class touchSwipe : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        anim = GetComponent<Animator>();
         pageSound = GetComponent<AudioSource>();
         canSwipe = false;
         dragDistance = Screen.height * 20 / 100; //dragDistance is 20% height of the screen 

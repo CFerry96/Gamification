@@ -15,20 +15,18 @@ public class movementScript : MonoBehaviour {
     public float headBobMultiplier;
     float playerBobY;
     public float headBobCycleSpeed;
-    WalkingPauseMenu pauseMenu;
     WalkingPauseMenu settingsMenu;
 
 
     // Use this for initialization
     void Start () {       
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint").OrderBy(go => go.name).ToArray();
-        pauseMenu = this.gameObject.GetComponent<WalkingPauseMenu>();
         settingsMenu = this.gameObject.GetComponent<WalkingPauseMenu>();
 	}
 
     // Update is called once per frame
     void Update () {
-        if (pauseMenu.Pause == false && settingsMenu == false)
+        if (settingsMenu.settingsOn == false)
         { 
             theta += Time.deltaTime * headBobCycleSpeed;
             playerBobY = Mathf.Sin(theta) / 100;
