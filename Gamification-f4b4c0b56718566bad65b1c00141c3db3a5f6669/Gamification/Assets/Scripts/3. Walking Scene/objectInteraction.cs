@@ -5,11 +5,11 @@ using UnityEngine;
 public class objectInteraction : MonoBehaviour {
     public Camera cam;
     public bool clickedOnce;
-    public AudioSource clickSound;
+    
 
     // Use this for initialization
     void Start() {
-        clickSound = GetComponent<AudioSource>();
+        
         cam = GetComponent<Camera>();
     }
 
@@ -22,10 +22,7 @@ public class objectInteraction : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, 1000))
                 if (hit.transform.tag == "Interactable")
                 {
-                    if (clickSound != null)
-                    {
-                        clickSound.Play();
-                    }
+                   
                     //print("I'm looking at " + hit.transform.name);
                     hit.transform.gameObject.SendMessage("clicked");
                     clickedOnce = true;

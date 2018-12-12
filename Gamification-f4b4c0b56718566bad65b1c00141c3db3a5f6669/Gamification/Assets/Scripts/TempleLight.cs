@@ -5,11 +5,13 @@ using UnityEngine;
 public class TempleLight : MonoBehaviour {
     private bool lit = false;
     private Light solas;
+    AudioSource soundEffect;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         solas = GetComponent<Light>();
-	}
+        soundEffect = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -27,6 +29,7 @@ public class TempleLight : MonoBehaviour {
     {
         if(lit == false)
         {
+            soundEffect.Play();
             lit = true;
         }
         else if(lit == true)
