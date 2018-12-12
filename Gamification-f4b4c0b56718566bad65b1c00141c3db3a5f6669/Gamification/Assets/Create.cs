@@ -7,6 +7,7 @@ public class Create : MonoBehaviour {
     public Camera cam;
     public GameObject book;
     private bool clicked = false;
+    public AudioSource audio;
 
 	void Update () {
         if(clicked == true)
@@ -17,6 +18,7 @@ public class Create : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        audio.Play();
         clicked = true;
     }
             
