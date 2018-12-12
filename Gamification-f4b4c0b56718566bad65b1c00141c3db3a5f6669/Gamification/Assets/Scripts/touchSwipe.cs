@@ -14,10 +14,13 @@ public class touchSwipe : MonoBehaviour {
     float animationTime = 0.5f, animationTime2 = 1.2f;
     //public GameObject rightSideObjects, leftSideObjects, settingsIcon, exitIcon;
     public GameObject[] leftsideObjects, rightsideObjects;
+    public static bool canSwipe;
+    AudioSource pageSound;
 
     // Use this for initialization
     void Start () {
-        anim = GetComponent<Animator>();
+        pageSound = GetComponent<AudioSource>();
+        canSwipe = false;
         dragDistance = Screen.height * 20 / 100; //dragDistance is 20% height of the screen 
         leftsideObjects = GameObject.FindGameObjectsWithTag("leftside");
         rightsideObjects = GameObject.FindGameObjectsWithTag("rightside");
@@ -62,7 +65,10 @@ public class touchSwipe : MonoBehaviour {
                         {   //Left swipe
                             Debug.Log("Left Swipe");
                             //SceneManager.LoadScene("Page 2");
-                            StartCoroutine(swipePageLeft());
+                            if (canSwipe)
+                            {
+                                StartCoroutine(swipePageLeft());
+                            }
                         }
                     }
                     else
@@ -94,6 +100,7 @@ public class touchSwipe : MonoBehaviour {
             right.SetActive(false);
         }
         anim.SetTrigger("nextPage");
+        pageSound.Play();
         yield return new WaitForSeconds(animationTime);
         foreach (GameObject left in leftsideObjects)
         {
@@ -115,6 +122,7 @@ public class touchSwipe : MonoBehaviour {
             left.SetActive(false);
         }
         anim.SetTrigger("previousPage");
+        pageSound.Play();
         yield return new WaitForSeconds(animationTime);
         foreach (GameObject right in rightsideObjects)
         {

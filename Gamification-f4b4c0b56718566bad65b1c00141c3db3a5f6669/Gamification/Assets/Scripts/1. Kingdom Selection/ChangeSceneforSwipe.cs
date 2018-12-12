@@ -25,7 +25,8 @@ public class ChangeSceneforSwipe : MonoBehaviour {
     private void OnMouseDown()
     {
         arrow.SetActive(true);
-        SwipeScript.canSwipe = true;
+        SwipeScript.canSwipe = true; //pc build
+        touchSwipe.canSwipe = true; //mobile build
         if (Spotlights.Length == 0)
         {
             soundManager.soundBoy.StartCoroutine("fadeInLayers");
