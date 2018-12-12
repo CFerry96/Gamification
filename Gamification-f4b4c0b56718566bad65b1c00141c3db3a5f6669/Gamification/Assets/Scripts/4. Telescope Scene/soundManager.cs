@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class soundManager : MonoBehaviour {
     public static soundManager soundBoy = null;
@@ -9,11 +10,17 @@ public class soundManager : MonoBehaviour {
     public float fadeInTime;
     public float fadeOutTime;
     //public static soundManager instance = null;
+    public float musicVolume;
+    public float soundEffectsVolume;
+    public Slider musicSlider;
+    public Slider effectsSlider;
+    public bool completedTrack;
 
     
 
 	// Use this for initialization
 	void Awake () {
+        
       if(soundBoy == null)
         {
            // DontDestroyOnLoad(gameObject);
@@ -28,7 +35,12 @@ public class soundManager : MonoBehaviour {
 
     private void Start()
     {
+        completedTrack = false;
+        musicSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        effectsSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
         layerTrack.volume = 0;
+        musicVolume = 1;
+        soundEffectsVolume = 1;
     }
     // Update is called once per frame
     void Update () {
@@ -40,15 +52,31 @@ public class soundManager : MonoBehaviour {
     {
         note.Play();
     }
+
+    public void ValueChangeCheck()
+    {
+        // Debug.Log(musicSlider.value);
+        baseTrack.volume = musicSlider.value;
+        if (completedTrack)
+        {
+            layerTrack.volume = musicSlider.value;
+            finalTrack.volume = musicSlider.value;
+        }
+        note1.volume = effectsSlider.value;
+        note2.volume = effectsSlider.value;
+        note3.volume = effectsSlider.value;
+    }
     IEnumerator fadeInLayers()
     {
         bool fadeIn = true;
         while (fadeIn)
         {
             layerTrack.volume += Time.deltaTime/fadeInTime;
-            if(layerTrack.volume == 1)
+            if(layerTrack.volume >= musicSlider.value)
             {
                 fadeIn = false;
+                layerTrack.volume = musicSlider.value;
+                completedTrack = true;
             }
             yield return new WaitForSeconds(0.1f);
         }
@@ -61,9 +89,10 @@ public class soundManager : MonoBehaviour {
         while (fadeIn)
         {
             finalTrack.volume += Time.deltaTime / fadeInTime;
-            if (finalTrack.volume == 1)
+            if (finalTrack.volume >= musicSlider.value)
             {
                 fadeIn = false;
+                finalTrack.volume = musicSlider.value;
             }
             yield return new WaitForSeconds(0.1f);
         }
@@ -76,4 +105,5 @@ public class soundManager : MonoBehaviour {
         }
         yield return null;
     }
+    
 }
