@@ -64,10 +64,10 @@ public class audioRec : MonoBehaviour
     void OnGUI()
     {
 
-        if (recording)
-        {
-            GUI.Label(new Rect(500, 10, 100, 20), "Recording:" + maxRecordingTime);
-        }
+        //if (recording)
+        //{
+        //    GUI.Label(new Rect(500, 10, 100, 20), "Recording:" + maxRecordingTime);
+        //}
         
         //if (GUI.Button(new Rect(10, 10, 60, 50), "Record"))
         //{
