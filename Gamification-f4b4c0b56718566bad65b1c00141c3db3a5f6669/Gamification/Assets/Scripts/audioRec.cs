@@ -12,9 +12,10 @@ public class audioRec : MonoBehaviour
     public bool recording, optionsOpen;
     public float fadeInTime;
     float fadeInCount;
-    public Text optionText;
+    public Text optionText, playBackText;
     public Image recordButton, playButton;
     AudioSource audio;
+    public GameObject exitButton;
 
 
     void Start() {
@@ -26,17 +27,25 @@ public class audioRec : MonoBehaviour
         fadeInCount += Time.deltaTime;
         if (recording == true)
         {
+            playBackText.text = "Recording:" + " " + Mathf.RoundToInt(maxRecordingTime);
+            playButton.color = Color.white;
+            exitButton.SetActive(false);
             maxRecordingTime -= Time.deltaTime;
             Debug.Log(maxRecordingTime);
         }
         if (maxRecordingTime <= 0)
         {
+            
             Microphone.End(null);
             recording = false;
             maxRecordingTime = recordingTime;
             AudioSerialisation.SaveAudioClipToDisk(myAudioClip, "myfile");
         }
-
+        if (!recording)
+        {
+            playBackText.text = "";
+            exitButton.SetActive(true);
+        }
         if (audio.isPlaying)
         {
             playButton.color = Color.green;
@@ -54,8 +63,11 @@ public class audioRec : MonoBehaviour
 
     void OnGUI()
     {
-        
-        GUI.Label(new Rect(500, 10, 100, 20), "Recording:" + maxRecordingTime);
+
+        if (recording)
+        {
+            GUI.Label(new Rect(500, 10, 100, 20), "Recording:" + maxRecordingTime);
+        }
         
         //if (GUI.Button(new Rect(10, 10, 60, 50), "Record"))
         //{
@@ -88,6 +100,7 @@ public class audioRec : MonoBehaviour
     }
     public void RecordAudio()
     {
+        audio.Stop();
         if (!recording)
         {
             myAudioClip = Microphone.Start(null, false, 10, 44100);
